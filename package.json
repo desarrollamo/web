@@ -1,0 +1,11 @@
+{
+  "name": "@desarrollamo/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "snapshot": "python scripts/snapshot-live.py",
+    "validate": "node scripts/validate.mjs",
+    "check": "npm run validate"
+  }
+}

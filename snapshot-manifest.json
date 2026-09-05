@@ -1,0 +1,408 @@
+{
+  "source": "https://desarrollamo.com.ar/",
+  "captured": 67,
+  "files": [
+    {
+      "url": "https://desarrollamo.com.ar/cookies",
+      "path": "public/cookies/index.html",
+      "type": "text/html",
+      "bytes": 15611
+    },
+    {
+      "url": "https://desarrollamo.com.ar/faq",
+      "path": "public/faq/index.html",
+      "type": "text/html",
+      "bytes": 30813
+    },
+    {
+      "url": "https://desarrollamo.com.ar/galeria",
+      "path": "public/galeria/index.html",
+      "type": "text/html",
+      "bytes": 51666
+    },
+    {
+      "url": "https://desarrollamo.com.ar/",
+      "path": "public/index.html",
+      "type": "text/html",
+      "bytes": 21052
+    },
+    {
+      "url": "https://desarrollamo.com.ar/licenses",
+      "path": "public/licenses/index.html",
+      "type": "text/html",
+      "bytes": 17058
+    },
+    {
+      "url": "https://desarrollamo.com.ar/manifiesto.html",
+      "path": "public/manifiesto.html",
+      "type": "text/html",
+      "bytes": 27659
+    },
+    {
+      "url": "https://desarrollamo.com.ar/manifiesto",
+      "path": "public/manifiesto/index.html",
+      "type": "text/html",
+      "bytes": 27659
+    },
+    {
+      "url": "https://desarrollamo.com.ar/payments",
+      "path": "public/payments/index.html",
+      "type": "text/html",
+      "bytes": 20395
+    },
+    {
+      "url": "https://desarrollamo.com.ar/privacy",
+      "path": "public/privacy/index.html",
+      "type": "text/html",
+      "bytes": 20542
+    },
+    {
+      "url": "https://desarrollamo.com.ar/servicios",
+      "path": "public/servicios/index.html",
+      "type": "text/html",
+      "bytes": 68561
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/galeria.css",
+      "path": "public/static/galeria.css",
+      "type": "text/css",
+      "bytes": 6718
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/galeria.js",
+      "path": "public/static/galeria.js",
+      "type": "application/javascript",
+      "bytes": 2202
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/1000236824.jpg",
+      "path": "public/static/gallery-v3/1000236824.jpg",
+      "type": "image/jpeg",
+      "bytes": 209507
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/1000237076.jpg",
+      "path": "public/static/gallery-v3/1000237076.jpg",
+      "type": "image/jpeg",
+      "bytes": 130917
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/1000237095.jpg",
+      "path": "public/static/gallery-v3/1000237095.jpg",
+      "type": "image/jpeg",
+      "bytes": 118780
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/agustin-vitelli.svg",
+      "path": "public/static/gallery-v3/agustin-vitelli.svg",
+      "type": "image/svg+xml",
+      "bytes": 1021
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/archivo-de-imagenes-ia.svg",
+      "path": "public/static/gallery-v3/archivo-de-imagenes-ia.svg",
+      "type": "image/svg+xml",
+      "bytes": 1061
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/auditor-web-basico.svg",
+      "path": "public/static/gallery-v3/auditor-web-basico.svg",
+      "type": "image/svg+xml",
+      "bytes": 987
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/calculamo.svg",
+      "path": "public/static/gallery-v3/calculamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1047
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/casabosco-arquitectura.svg",
+      "path": "public/static/gallery-v3/casabosco-arquitectura.svg",
+      "type": "image/svg+xml",
+      "bytes": 1232
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/certificados-a-json.svg",
+      "path": "public/static/gallery-v3/certificados-a-json.svg",
+      "type": "image/svg+xml",
+      "bytes": 987
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/chessi.svg",
+      "path": "public/static/gallery-v3/chessi.svg",
+      "type": "image/svg+xml",
+      "bytes": 1044
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/comparador-de-imagenes.svg",
+      "path": "public/static/gallery-v3/comparador-de-imagenes.svg",
+      "type": "image/svg+xml",
+      "bytes": 991
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/conversamo.svg",
+      "path": "public/static/gallery-v3/conversamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1048
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/cronamo.svg",
+      "path": "public/static/gallery-v3/cronamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1045
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/el-maquina-barbershop.svg",
+      "path": "public/static/gallery-v3/el-maquina-barbershop.svg",
+      "type": "image/svg+xml",
+      "bytes": 1232
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/empanadas-caseritas.svg",
+      "path": "public/static/gallery-v3/empanadas-caseritas.svg",
+      "type": "image/svg+xml",
+      "bytes": 1229
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/erika-boveri.svg",
+      "path": "public/static/gallery-v3/erika-boveri.svg",
+      "type": "image/svg+xml",
+      "bytes": 1222
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/eros-dj.svg",
+      "path": "public/static/gallery-v3/eros-dj.svg",
+      "type": "image/svg+xml",
+      "bytes": 1217
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/felipe-ignacio-rubio.svg",
+      "path": "public/static/gallery-v3/felipe-ignacio-rubio.svg",
+      "type": "image/svg+xml",
+      "bytes": 1025
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/fierro-argentino.svg",
+      "path": "public/static/gallery-v3/fierro-argentino.svg",
+      "type": "image/svg+xml",
+      "bytes": 1226
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/generador-de-landings.svg",
+      "path": "public/static/gallery-v3/generador-de-landings.svg",
+      "type": "image/svg+xml",
+      "bytes": 989
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/generador-de-presupuestos.svg",
+      "path": "public/static/gallery-v3/generador-de-presupuestos.svg",
+      "type": "image/svg+xml",
+      "bytes": 993
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/generalamo.svg",
+      "path": "public/static/gallery-v3/generalamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1048
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/gespasa-argentina.svg",
+      "path": "public/static/gallery-v3/gespasa-argentina.svg",
+      "type": "image/svg+xml",
+      "bytes": 1227
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/identidad-desarrollamo.svg",
+      "path": "public/static/gallery-v3/identidad-desarrollamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1053
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/julia-ines-sidor.svg",
+      "path": "public/static/gallery-v3/julia-ines-sidor.svg",
+      "type": "image/svg+xml",
+      "bytes": 1022
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/krow-rosario.svg",
+      "path": "public/static/gallery-v3/krow-rosario.svg",
+      "type": "image/svg+xml",
+      "bytes": 1222
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/limpieza-de-productos.svg",
+      "path": "public/static/gallery-v3/limpieza-de-productos.svg",
+      "type": "image/svg+xml",
+      "bytes": 989
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/logan.svg",
+      "path": "public/static/gallery-v3/logan.svg",
+      "type": "image/svg+xml",
+      "bytes": 1215
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/lola-jimeno-fernandez.svg",
+      "path": "public/static/gallery-v3/lola-jimeno-fernandez.svg",
+      "type": "image/svg+xml",
+      "bytes": 1027
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/lukas.svg",
+      "path": "public/static/gallery-v3/lukas.svg",
+      "type": "image/svg+xml",
+      "bytes": 1215
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/makana.svg",
+      "path": "public/static/gallery-v3/makana.svg",
+      "type": "image/svg+xml",
+      "bytes": 1216
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/marcos-rubial.svg",
+      "path": "public/static/gallery-v3/marcos-rubial.svg",
+      "type": "image/svg+xml",
+      "bytes": 1018
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/marti-bermejo.svg",
+      "path": "public/static/gallery-v3/marti-bermejo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1224
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/mercedes-yanez-reinvencion.svg",
+      "path": "public/static/gallery-v3/mercedes-yanez-reinvencion.svg",
+      "type": "image/svg+xml",
+      "bytes": 1239
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/mesaamo.svg",
+      "path": "public/static/gallery-v3/mesaamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1045
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/mi-pc-powershell.svg",
+      "path": "public/static/gallery-v3/mi-pc-powershell.svg",
+      "type": "image/svg+xml",
+      "bytes": 984
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/move-dj.svg",
+      "path": "public/static/gallery-v3/move-dj.svg",
+      "type": "image/svg+xml",
+      "bytes": 1217
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/nadia-martin.svg",
+      "path": "public/static/gallery-v3/nadia-martin.svg",
+      "type": "image/svg+xml",
+      "bytes": 1018
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/nfcamo.svg",
+      "path": "public/static/gallery-v3/nfcamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1044
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/notasamo.svg",
+      "path": "public/static/gallery-v3/notasamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1046
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/ordenar-excel-a-json.svg",
+      "path": "public/static/gallery-v3/ordenar-excel-a-json.svg",
+      "type": "image/svg+xml",
+      "bytes": 988
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/peluqueria-silvina.svg",
+      "path": "public/static/gallery-v3/peluqueria-silvina.svg",
+      "type": "image/svg+xml",
+      "bytes": 1229
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/proyecto-estampa.svg",
+      "path": "public/static/gallery-v3/proyecto-estampa.svg",
+      "type": "image/svg+xml",
+      "bytes": 1226
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/reliance-travel.svg",
+      "path": "public/static/gallery-v3/reliance-travel.svg",
+      "type": "image/svg+xml",
+      "bytes": 1225
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/remerasco.svg",
+      "path": "public/static/gallery-v3/remerasco.svg",
+      "type": "image/svg+xml",
+      "bytes": 1219
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/renombrador-masivo.svg",
+      "path": "public/static/gallery-v3/renombrador-masivo.svg",
+      "type": "image/svg+xml",
+      "bytes": 986
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/storeamo.svg",
+      "path": "public/static/gallery-v3/storeamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1046
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/tareasamo.svg",
+      "path": "public/static/gallery-v3/tareasamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1047
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/tarot-con-kima.svg",
+      "path": "public/static/gallery-v3/tarot-con-kima.svg",
+      "type": "image/svg+xml",
+      "bytes": 1224
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/temporizamo.svg",
+      "path": "public/static/gallery-v3/temporizamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1049
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/termuxnow-sh.svg",
+      "path": "public/static/gallery-v3/termuxnow-sh.svg",
+      "type": "image/svg+xml",
+      "bytes": 980
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/wifiamo.svg",
+      "path": "public/static/gallery-v3/wifiamo.svg",
+      "type": "image/svg+xml",
+      "bytes": 1045
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/gallery-v3/yoga-con-jocha.svg",
+      "path": "public/static/gallery-v3/yoga-con-jocha.svg",
+      "type": "image/svg+xml",
+      "bytes": 1224
+    },
+    {
+      "url": "https://desarrollamo.com.ar/static/site-global.css",
+      "path": "public/static/site-global.css",
+      "type": "text/css",
+      "bytes": 2740
+    },
+    {
+      "url": "https://desarrollamo.com.ar/terms",
+      "path": "public/terms/index.html",
+      "type": "text/html",
+      "bytes": 23076
+    }
+  ]
+}
