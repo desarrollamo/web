@@ -2,27 +2,38 @@
 
 Fuente de verdad del sitio público **[desarrollamo.com.ar](https://desarrollamo.com.ar/)**.
 
-## Estado inicial
+## Alcance
 
-`v0.1.0` es una migración conservadora del sitio que ya estaba en producción el 2026-09-05. No mezcla la migración con un rediseño.
+Este repositorio contiene únicamente la superficie publicable del sitio corporativo: presentación, servicios, trabajos seleccionados, contacto y políticas públicas.
 
-El sitio Netlify existente se preserva:
-
-- dominio: `desarrollamo.com.ar`;
-- site ID: `bfc9b6b0-c384-4092-9108-c48cb876649e`;
-- producción no se recrea ni se transfiere durante esta migración.
+No contiene credenciales, infraestructura privada, procesos internos, datos de clientes ni maquinaria operativa de DesarrollAMO.
 
 ## Estructura
 
 - `public/` — único directorio publicable;
-- `scripts/snapshot-live.py` — captura reproducible del sitio público actual;
-- `scripts/validate.mjs` — evita snapshots incompletos y archivos internos expuestos;
-- `snapshot-manifest.json` — evidencia de las URLs capturadas;
-- `netlify.toml` — publica exclusivamente `public/`.
+- `scripts/sync-footer.mjs` — sincroniza el footer corporativo oficial;
+- `scripts/validate.mjs` — controla rutas, exposición y contrato del footer;
+- `scripts/snapshot-live.py` — herramienta conservadora de recuperación/migración;
+- `netlify.toml` — valida y publica exclusivamente `public/`.
 
-## Decisión de seguridad
+## Footer corporativo
 
-El deploy histórico mezclaba páginas públicas con tests, scripts Python, PowerShell y herramientas internas. Esos archivos **no forman parte del nuevo publish**.
+La web fija **Design System v0.3.0** y **Branding v1.3.0**. Durante `npm run check` se sincronizan localmente el CSS y el wordmark, y las páginas reciben una única instancia del footer oficial.
+
+El footer enlaza a FAQ, Términos, Privacidad, Cookies, Pagos y Licencias. Las páginas no mantienen copias independientes del componente.
+
+## Políticas públicas
+
+Las rutas públicas vigentes son:
+
+- `/faq`
+- `/terms`
+- `/privacy`
+- `/cookies`
+- `/payments`
+- `/licenses`
+
+No se permite publicar políticas con marcadores pendientes, referencias históricas obsoletas o datos personales innecesarios.
 
 ## Verificación
 
@@ -30,13 +41,8 @@ El deploy histórico mezclaba páginas públicas con tests, scripts Python, Powe
 npm run check
 ```
 
-Antes de considerar una versión apta para producción se debe verificar además mediante un **deploy preview** del mismo proyecto Netlify y probar sus rutas principales.
+El mismo comando es la puerta de publicación en Netlify. Si falla la sincronización, falta una ruta o reaparece un footer legado, el deploy debe fallar.
 
-## Evolución
+## Principio
 
-Una vez establecida esta fuente de verdad, el rediseño puede avanzar en cambios separados consumiendo:
-
-- [`desarrollamo/branding`](https://github.com/desarrollamo/branding)
-- [`desarrollamo/design-system`](https://github.com/desarrollamo/design-system)
-
-Así cada mejora futura tiene un diff auditable contra el sitio que realmente estaba publicado.
+La web muestra qué es y qué hace DesarrollAMO. La arquitectura interna de la empresa se mantiene fuera de esta superficie pública.

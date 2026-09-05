@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64" role="img" aria-labelledby="title">
+  <title id="title">DesarrollAMO</title>
+  <g transform="translate(0 8) scale(.86)">
+    <polygon points="8,40 20,16 32,40" fill="#7DD3FC"/>
+    <polygon points="24,40 36,12 48,40" fill="#FF5AA5"/>
+    <polygon points="40,40 52,20 60,40" fill="#FF5AA5"/>
+    <circle cx="69" cy="29" r="10.5" fill="#FFD166" opacity="0.16"/>
+    <circle cx="69" cy="29" r="7.8" fill="#FFD166"/>
+  </g>
+  <text x="82" y="43" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="34" font-weight="800">
+    <tspan fill="#7DD3FC">Desarroll</tspan><tspan fill="#FF5AA5">AMO</tspan><tspan fill="#7DD3FC">.</tspan>
+  </text>
+</svg>
