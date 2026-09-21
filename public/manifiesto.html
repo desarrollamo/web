@@ -90,6 +90,7 @@ h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:700;line-height:1.15}
 /* Scroll behavior */
 html{scroll-behavior:smooth}
 </style>
+<link rel="stylesheet" href="/static/apoyo-damo.css">
 <link rel="stylesheet" href="/static/desarrollamo-footer.css" data-desarrollamo-footer />
 </head>
 <body class="min-h-screen flex flex-col">
@@ -107,6 +108,7 @@ html{scroll-behavior:smooth}
 <svg width="38" height="28" viewBox="0 0 64 48" class="drop-shadow" aria-hidden="true"><use href="#logo-desarrollamo"></use></svg>
 <span class="font-semibold tracking-tight"><span class="text-sky-300">Desarroll</span><span class="text-pink-400">AMO</span></span>
 </a>
+<a class="amo-top-support" href="/apoyar" aria-label="Apoyar económicamente el proyecto DesarrollAMO">Apoyar</a>
 <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Principal">
 <a class="hover:text-sky-300" href="/">Inicio</a>
 <a class="hover:text-sky-300" href="/servicios">Servicios</a>
@@ -439,7 +441,18 @@ html{scroll-behavior:smooth}
   </section>
 
   <!-- 10. CIERRE Y LLAMADO -->
-  <section class="px-6 py-20" id="sumarse">
+  <section class="amo-manifesto-support" id="sostenibilidad" aria-labelledby="amo-apoyo-manifiesto">
+  <div class="amo-kicker">Sostenibilidad · libertad para apoyar</div>
+  <h2 id="amo-apoyo-manifiesto">Cómo se sostiene DesarrollAMO y qué significa apoyarlo.</h2>
+  <p>DesarrollAMO trabaja desarrollando soluciones tecnológicas para clientes y construyendo herramientas propias. La contratación de servicios es una actividad comercial: cada encargo tiene un presupuesto, un alcance y condiciones acordadas. Además, quien valore el proyecto puede decidir <strong>acompañarlo económicamente de manera voluntaria</strong>.</p>
+  <p>Un aporte de apoyo no es el pago de un encargo, una reserva, una inversión ni una compra de participación. No promete beneficios económicos, acceso preferencial, funcionalidades, entregas, soporte individual ni resultados futuros. Apoyar es opcional: no condiciona el uso de nuestras páginas públicas ni reemplaza la contratación de un servicio.</p>
+  <p>Los planes de apoyo disponibles en Mercado Pago pueden cobrarse de forma recurrente, con frecuencia semanal, quincenal o mensual y el importe que elija la persona al suscribirse. El monto y la periodicidad se muestran antes de confirmar el pago; la suscripción puede gestionarse o cancelarse desde Mercado Pago.</p>
+  <p>Para una colaboración puntual sin suscripción también están disponibles los datos públicos de cobro de CobrAMO. Nunca presentamos un aporte voluntario como un pago obligatorio ni informamos un trabajo como abonado por el solo hecho de recibir una intención de pago.</p>
+  <a class="amo-support-link" href="/apoyar">Conocer las opciones de apoyo →</a>
+  <a href="/servicios#precios" style="display:inline-flex;color:#7dd3fc;margin:14px 0 0 16px;font-weight:700">Ver servicios y precios →</a>
+</section>
+
+<section class="px-6 py-20" id="sumarse">
     <div class="max-w-3xl mx-auto text-center">
       <div class="glass-bg rounded-3xl p-12 md:p-16 shadow-2xl">
         <h2 class="text-white mb-6">
@@ -473,6 +486,8 @@ html{scroll-behavior:smooth}
 <!-- Animaciones fade-in -->
 <script>
 </script>
+
+
 
 
 
