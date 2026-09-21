@@ -47,4 +47,11 @@ const footerCss = fs.readFileSync(path.join(pub, 'static/desarrollamo-footer.css
 for (const token of ['.amo-footer','amo-footer__legal','amo-footer__brand']) if (!footerCss.includes(token)) throw new Error(`Footer CSS incompleto: ${token}`);
 if (/\bbody\s*\{/i.test(footerCss)) throw new Error('El footer aislado no puede estilizar body');
 
+for (const route of ['servicios/index.html', 'servicios.html']) {
+  const html = fs.readFileSync(path.join(pub, route), 'utf8');
+  if (count(html, 'data-mp-one-time="cv-pdf-profesional"') !== 1) throw new Error(`Link de CV PDF no único: ${route}`);
+  if (count(html, 'href="https://mpago.la/2uVjZCB"') !== 1) throw new Error(`Link productivo de CV PDF ausente: ${route}`);
+  if (count(html, 'class="amo-price-group"') < 6) throw new Error(`Catálogo de servicios incompleto: ${route}`);
+}
+
 console.log(`Web v0.2.0: validación PASS (${files.length} archivos, ${htmlFiles.length} HTML)`);
