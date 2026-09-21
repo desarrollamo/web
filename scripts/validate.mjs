@@ -7,7 +7,8 @@ const required = [
   'index.html','servicios/index.html','galeria/index.html','manifiesto/index.html',
   'faq/index.html','terms/index.html','privacy/index.html','cookies/index.html',
   'payments/index.html','licenses/index.html','static/desarrollamo-footer.css',
-  'static/desarrollamo-brand-horizontal.svg'
+  'static/desarrollamo-brand-horizontal.svg', 'static/apoyo-damo.css',
+  'apoyar/index.html','apoyar.html'
 ];
 for (const rel of required) if (!fs.existsSync(path.join(pub, rel))) throw new Error(`Falta ruta pública requerida: ${rel}`);
 
@@ -24,7 +25,10 @@ const htmlFiles = files.filter((file) => file.endsWith('.html'));
 const count = (text, needle) => text.split(needle).length - 1;
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
-  const rel = path.relative(pub, file);  if (count(html, '<!-- DESARROLLAMO-FOOTER:START -->') !== 1) throw new Error(`Footer sin inicio único: ${rel}`);
+  const rel = path.relative(pub, file);
+  if (count(html, 'class="amo-top-support"') !== 1) throw new Error(`Enlace de apoyo no único en cabecera: ${rel}`);
+  if (!html.includes('href="/apoyar"')) throw new Error(`Sin enlace de apoyo: ${rel}`);
+  if (count(html, '<!-- DESARROLLAMO-FOOTER:START -->') !== 1) throw new Error(`Footer sin inicio único: ${rel}`);
   if (count(html, '<!-- DESARROLLAMO-FOOTER:END -->') !== 1) throw new Error(`Footer sin fin único: ${rel}`);
   if (count(html, 'amo-footer--corporate') !== 1) throw new Error(`Footer corporativo no único: ${rel}`);
   if (count(html, 'data-desarrollamo-footer') !== 1) throw new Error(`CSS de footer no único: ${rel}`);
