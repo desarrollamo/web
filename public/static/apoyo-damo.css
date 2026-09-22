@@ -47,3 +47,43 @@
 @media(max-width:810px){.amo-pricing-grid,.amo-support-page .amo-support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.amo-support-page .amo-support-nav a:nth-child(1){display:none}}
 @media(max-width:600px){.amo-pricing-grid,.amo-subscription-list,.amo-support-page .amo-support-grid{grid-template-columns:1fr}.amo-pricing{margin:18px 12px;padding:22px 15px}.amo-price-table{font-size:.77rem}.amo-price-table th,.amo-price-table td{padding:8px 5px}.amo-support-page .amo-support-brand img{width:126px}.amo-support-page .amo-support-nav{gap:10px}.amo-support-page .amo-support-nav a{font-size:.76rem}.amo-support-page .amo-support-wrap{padding-top:94px}}
 
+
+/* /apoyar · continuidad visual, lectura y navegación móvil; no afecta /servicios */
+.amo-support-page{background:radial-gradient(circle at 50% -10%,rgba(103,184,255,.09),transparent 34%),#05080d;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.amo-support-page .amo-kicker,.amo-support-page header nav,.amo-support-page .amo-top-support{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+.amo-support-page header{background:rgba(5,8,13,.95);border-bottom-color:#172635}
+.amo-support-page .amo-top-support{border-color:#344355;background:#101a25;color:#d7e9f4!important;font-weight:750}
+.amo-support-page .amo-top-support:hover,.amo-support-page .amo-top-support:focus-visible{border-color:#67b8ff;background:#142a39}
+.amo-support-page .amo-support-intro,.amo-support-page .amo-support-card{border-radius:12px;background:linear-gradient(180deg,#0f1822,#080d14);border-color:#223447}
+.amo-support-page .amo-support-card{display:flex;flex-direction:column;gap:8px;border-top:2px solid #67b8ff}
+.amo-support-page .amo-support-card:nth-child(2){border-top-color:#ff5ca8}
+.amo-support-page .amo-support-card:nth-child(3){border-top-color:#72ffb5}
+.amo-support-page .amo-support-card h2,.amo-support-page .amo-support-card p{margin:0}
+.amo-support-page .amo-support-card small{margin-top:auto}
+.amo-support-page .amo-support-recurrence{margin-top:20px;padding:15px 17px;border:1px solid #526044;border-left:3px solid #ffd36a;border-radius:8px;background:rgba(255,211,106,.055)}
+.amo-support-page .amo-support-recurrence strong{color:#ffdfa0}
+.amo-support-page .amo-support-recurrence p{margin:7px 0 9px;font-size:14px}
+.amo-support-page .amo-support-recurrence a{color:#9fd8ff;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.amo-support-page .amo-support-discover{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:20px;padding:20px;border:1px solid #244055;border-radius:12px;background:#0a1620}
+.amo-support-page .amo-support-discover h2{font-size:clamp(19px,2.2vw,25px);margin:7px 0 5px}
+.amo-support-page .amo-support-discover p{margin:0;max-width:60ch;font-size:14px}
+.amo-support-page .amo-support-discover nav{display:grid;gap:8px;min-width:215px}
+.amo-support-page .amo-support-discover nav a{padding:9px 11px;border:1px solid #315067;background:#102838;color:#b8e5ff;font-size:12px;font-weight:800;text-align:center}
+.amo-support-page a:focus-visible{outline:2px solid #67b8ff;outline-offset:3px}
+.amo-support-page #aporte-unico{scroll-margin-top:86px}
+@media(max-width:810px){
+ .amo-support-page .amo-support-nav a:nth-child(1){display:inline}
+ .amo-support-page header>div{gap:8px}
+ .amo-support-page .amo-top-support{margin:0 4px 0 0;padding:.38rem .55rem;font-size:.7rem}
+ .amo-support-page .amo-support-nav{gap:10px}
+ .amo-support-page .amo-support-discover{flex-direction:column;align-items:stretch}
+ .amo-support-page .amo-support-discover nav{min-width:0}
+}
+@media(max-width:510px){
+ .amo-support-page .amo-top-support{display:none}
+ .amo-support-page header>div{padding:0 10px}
+ .amo-support-page .amo-support-brand img{width:min(33vw,126px)}
+ .amo-support-page .amo-support-nav a{font-size:11px}
+ .amo-support-page .amo-support-wrap{width:calc(100% - 20px)}
+ .amo-support-page .amo-support-intro{padding:20px 15px}
+}

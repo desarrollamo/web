@@ -1,0 +1,58 @@
+/* Servicios: estilos propios, cargados tras apoyo-damo.css para evitar conflictos. */
+    /* Servicios · lectura comercial (sólo esta página) */
+    .amo-price-preview{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:8px;padding:9px 10px;border:1px solid var(--line);background:linear-gradient(90deg,rgba(103,184,255,.075),rgba(114,255,181,.035))}
+    .amo-price-preview strong{font-size:10px;color:var(--green);letter-spacing:.04em;margin-right:8px}
+    .amo-price-preview a{padding:7px 9px;min-height:32px;display:inline-flex;align-items:center;border:1px solid #243d50;background:#091622;color:#d8eaf4;font-size:10px;line-height:1.3}
+    .amo-price-preview a:last-child{border-color:rgba(114,255,181,.45);color:var(--green);font-weight:800}
+    .amo-price-preview a:hover,.amo-price-preview a:focus-visible{border-color:var(--blue);outline:2px solid transparent;background:#142536}
+    .amo-pricing{max-width:none;margin:8px 0;border:1px solid var(--line);padding:clamp(12px,2vw,26px);background:linear-gradient(180deg,rgba(15,24,34,.95),rgba(8,13,20,.97));box-shadow:var(--shadow);scroll-margin-top:88px}
+    .amo-pricing .amo-kicker{color:var(--green);font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:800}
+    .amo-pricing #amo-pricing-title{font-size:clamp(24px,3vw,40px);letter-spacing:-.055em;line-height:1.12;margin:9px 0}
+    .amo-pricing p,.amo-pricing small{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#a7bccb;font-size:13px;line-height:1.6}
+    .amo-pricing>p{max-width:75ch;margin:0 0 12px}
+    .amo-price-block{margin-top:25px;padding-top:22px;border-top:1px solid var(--line)}
+    .amo-price-block>h3{font:800 clamp(18px,2vw,24px)/1.2 system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:-.04em;color:var(--text);margin:0 0 7px}
+    .amo-price-block>p{margin:0 0 15px;max-width:78ch}
+    .amo-pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .amo-price-card{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:15px;border:1px solid #243b4c;background:#0a141e;border-left:2px solid var(--blue)}
+    .amo-price-card:first-child{border-left-color:var(--green)}
+    .amo-price-card h3{font:750 16px/1.3 system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:-.025em;margin:0;color:#e8f2f8}
+    .amo-pricing .amo-price-card .amo-price{font:900 clamp(18px,2vw,23px)/1.25 ui-monospace,Consolas,monospace;color:var(--green);letter-spacing:-.04em}
+    .amo-price-card small{display:block;margin:0;color:#a5b9c7;font-size:12px;line-height:1.55}
+    .amo-pricing .amo-price-card>a{display:inline-flex;align-items:center;justify-content:center;min-height:37px;padding:9px 11px;margin-top:auto;background:#12283a;border:1px solid #34546b;color:#bfe8ff!important;font-size:11px;font-weight:800;line-height:1.35}
+    .amo-pricing .amo-price-card>a:hover,.amo-pricing .amo-price-card>a:focus-visible{background:#1a3a50;border-color:var(--blue);outline:2px solid transparent}
+    .amo-pricing .amo-price-card [data-mp-one-time]{background:var(--green);color:#071014!important;border-color:var(--green)}
+    .amo-pricing .amo-price-card [data-mp-one-time]:hover,.amo-pricing .amo-price-card [data-mp-one-time]:focus-visible{background:#a1ffd2;color:#071014!important}
+    .amo-pricing .amo-price-card small a{color:var(--blue)!important;text-decoration:underline;text-underline-offset:3px}
+    .amo-price-table-scroll{max-width:100%;overflow-x:auto;border:1px solid #294153;background:#08121c;scrollbar-width:thin}
+    .amo-price-table{width:100%;min-width:740px;border-collapse:separate;border-spacing:0;font:12px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+    .amo-price-table thead th{position:sticky;top:0;z-index:2;background:#152739;color:#cfe3f1;text-align:left;font-size:11px;padding:11px 13px;border-bottom:1px solid #345064}
+    .amo-price-table tbody td{padding:10px 13px;border-bottom:1px solid #1c3040;vertical-align:top;color:#cfdfeb}
+    .amo-price-table tbody tr:nth-child(odd):not(.amo-price-group) td{background:#0b1924}
+    .amo-price-table tbody tr:hover:not(.amo-price-group) td{background:#172d3c}
+    .amo-price-table tbody td:first-child,.amo-price-table thead th:first-child{position:sticky;left:0;z-index:1;min-width:190px;background:#10202d;font-weight:700}
+    .amo-price-table thead th:first-child{z-index:3;background:#152739}
+    .amo-price-table tbody tr:nth-child(odd):not(.amo-price-group) td:first-child{background:#132735}
+    .amo-price-table tbody tr:hover:not(.amo-price-group) td:first-child{background:#1c384a}
+    .amo-price-table tbody td:nth-child(2),.amo-price-table thead th:nth-child(2){text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;color:#a6f8cb}
+    .amo-price-table thead th:nth-child(2){color:#cfe3f1}
+    .amo-price-table tbody td:nth-child(3){color:#adc2d0;min-width:200px}
+    .amo-price-table .amo-price-group th{padding:12px 13px;text-align:left;border-top:1px solid #315168;border-bottom:1px solid #315168;background:#122738;color:var(--blue);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+    .amo-pricing .amo-price-note{padding:13px 15px;background:#0c1d2a;border-left:2px solid var(--green);font:12px/1.65 system-ui,-apple-system,Segoe UI,sans-serif;color:#b6ccd9}
+    .amo-pricing .amo-price-note strong{color:#eff8fd}
+    .amo-pricing .amo-price-note a,.amo-pricing .amo-support-link{color:var(--blue)!important;text-decoration:underline;text-underline-offset:3px}
+    .amo-price-tail{margin-top:15px}
+    .amo-subscription-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .amo-subscription-list .amo-price-card{border-left-color:var(--pink)}
+    .amo-subscription-list .amo-price-card .amo-price{color:var(--amber)}
+    .amo-price-warning{padding:12px 14px;border:1px solid #5a4630;background:#231b11;color:#ffe0a0!important}
+    .amo-price-support{padding:15px;border:1px solid #294153;background:#0a1722}
+    .amo-price-support .amo-price-tail{margin:0}
+    @media(max-width:1040px){.amo-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:780px){.amo-price-preview{gap:5px;margin-bottom:5px}.amo-price-preview strong{width:100%;margin:0}.amo-price-preview a{flex:1 1 auto}.amo-pricing{scroll-margin-top:72px;padding:12px}.amo-pricing-grid,.amo-subscription-list{grid-template-columns:1fr}.amo-price-card{padding:13px}.amo-price-table{font-size:12px}.amo-price-table tbody td:first-child,.amo-price-table thead th:first-child{min-width:166px;max-width:190px;white-space:normal}}
+
+
+    .amo-pricing .amo-cv-includes{width:100%;border-top:1px solid var(--line);padding-top:9px}
+    .amo-pricing .amo-cv-includes summary{cursor:pointer;color:var(--blue);font:750 12px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+    .amo-pricing .amo-cv-includes small{margin-top:8px}
+    .amo-pricing a:focus-visible,.amo-price-preview a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
