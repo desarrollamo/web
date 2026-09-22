@@ -35,6 +35,10 @@ Las rutas públicas vigentes son:
 
 No se permite publicar políticas con marcadores pendientes, referencias históricas obsoletas o datos personales innecesarios.
 
+## Rutas públicas duplicadas
+
+Netlify sirve las rutas `/servicios`, `/apoyar`, `/galeria` y `/manifiesto` desde sus archivos planos `public/<ruta>.html`; cada una también tiene `public/<ruta>/index.html`. Conservá ambos archivos idénticos para preservar enlaces históricos y rutas directas. Al modificar una página, actualizá ambas copias en el mismo commit: `npm run validate` falla si falta alguna o difieren sus bytes. No elimines alias sin verificar primero rutas públicas y redirecciones de Netlify.
+
 ## Verificación
 
 ```bash

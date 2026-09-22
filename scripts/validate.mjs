@@ -21,6 +21,16 @@ walk(pub);
 for (const file of files) if (/\.(py|ps1|fish|toml|mts)$/i.test(file)) throw new Error(`Archivo interno expuesto: ${path.relative(pub, file)}`);
 if (files.length < 60) throw new Error(`Snapshot incompleto: sólo ${files.length} archivos`);
 
+// La URL sin extensión usa el archivo plano en Netlify: ambos deben ser idénticos.
+for (const route of ['servicios', 'apoyar', 'galeria', 'manifiesto']) {
+  const flat = path.join(pub, `${route}.html`);
+  const nested = path.join(pub, route, 'index.html');
+  if (!fs.existsSync(flat) || !fs.existsSync(nested)) throw new Error(`Falta un alias público: ${route}`);
+  if (!fs.readFileSync(flat).equals(fs.readFileSync(nested))) {
+    throw new Error(`Alias divergentes: ${route}.html y ${route}/index.html`);
+  }
+}
+
 const htmlFiles = files.filter((file) => file.endsWith('.html'));
 const count = (text, needle) => text.split(needle).length - 1;
 for (const file of htmlFiles) {
