@@ -188,6 +188,29 @@ html{scroll-behavior:smooth}
 .mf .mf-note{font-size:.95rem!important;color:#D2DFEC!important;margin:22px auto 0!important}
 @media(max-width:760px){.mf .mf-hero{padding:70px 18px 62px}.mf .mf-wrap{width:min(100% - 36px,1080px)}.mf .mf-promise,.mf .mf-cards,.mf .mf-ways{grid-template-columns:1fr}.mf .mf-ways .mf-panel:last-child{grid-column:auto}.mf .mf-brand{margin-bottom:30px}.mf .mf-actions{flex-direction:column;align-items:stretch}.mf .mf-btn{width:100%}.mf .mf-section{padding:63px 0}.mf .mf-standout{padding:20px 21px}}
 @media(prefers-reduced-motion:reduce){.mf .mf-btn{transition:none}.mf .mf-btn:hover{transform:none}}
+
+/* El footer oficial ya estaba incluido: elevarlo sobre el vídeo y su overlay. */
+body > footer.amo-footer{position:relative;z-index:35;flex-shrink:0;isolation:isolate;--amo-footer-bg:#07090d;--amo-footer-surface:#111827;--amo-footer-raised:#182033;--amo-footer-text:#E5E7EB;--amo-footer-muted:#D1D8E5;--amo-footer-border:rgba(255,255,255,.22);background:#07090d!important;color:#E5E7EB!important;border-top:2px solid #7DD3FC;box-shadow:0 -15px 35px rgba(0,0,0,.4);padding-block:23px}
+body > footer.amo-footer .amo-footer__logo{width:170px}
+body > footer.amo-footer .amo-footer__legal a{color:#D1D8E5}
+.mf .mf-listen{width:min(880px,100%);margin:30px auto 10px;padding:24px 28px;background:#1D3049;border:1px solid #6B8AA8;border-radius:20px;text-align:left;box-shadow:0 16px 45px rgba(0,0,0,.23)}
+.mf .mf-listen-head{display:flex;gap:15px;align-items:center;margin-bottom:18px}
+.mf .mf-listen-icon{flex:none;font-size:1.7rem;line-height:1;border-radius:14px;background:#304B66;padding:12px;color:#fff}
+.mf .mf-listen h2{font-size:clamp(1.25rem,2vw,1.7rem);line-height:1.25;margin:0 0 4px;color:#fff;letter-spacing:-.02em}
+.mf .mf-listen .mf-listen-description{margin:0;color:#E5EEF9;line-height:1.5;font-size:1rem}
+.mf .mf-listen-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:13px}
+.mf .mf-listen button{cursor:pointer;border:1px solid #7AA3C5;border-radius:999px;padding:10px 19px;min-height:45px;background:#203B56;color:#FFF;font-weight:750;font-family:inherit}
+.mf .mf-listen button.mf-listen-primary{background:#FF77B4;color:#091323;border-color:#FF77B4}
+.mf .mf-listen button:hover:not(:disabled){filter:brightness(1.12)}
+.mf .mf-listen button:disabled{cursor:not-allowed;opacity:.5}
+.mf .mf-listen label{display:block;color:#F3F8FF;font-size:.96rem;font-weight:720;margin:15px 0 6px}
+.mf .mf-listen select{width:100%;min-height:44px;max-width:100%;border-radius:10px;border:1px solid #7C9EBD;padding:9px 12px;color:#fff;background:#102139;font:inherit;font-size:1rem}
+.mf .mf-listen .mf-rate{display:flex;align-items:center;gap:13px}
+.mf .mf-listen .mf-rate input{flex:1;accent-color:#FF77B4;min-width:0}
+.mf .mf-listen .mf-rate output{font-variant-numeric:tabular-nums;white-space:nowrap;color:#FFF}
+.mf .mf-listen .mf-read-status{min-height:1.65em;margin:13px 0 0;color:#D8E9FB;font-size:.94rem;line-height:1.5}
+.mf .mf-speaking{outline:2px solid rgba(255,209,102,.75);outline-offset:5px;border-radius:4px}
+@media(max-width:760px){.mf .mf-listen{padding:18px}.mf .mf-listen-actions button{flex:1}.mf .mf-listen-head{align-items:flex-start}}
 </style>
 <main class="mf flex-grow pt-24 relative z-10" id="contenido">
   <section class="mf-hero" aria-labelledby="mf-title">
@@ -197,6 +220,20 @@ html{scroll-behavior:smooth}
       <h1 id="mf-title">Crecer es una decisión.<br><span>Construir, también.</span></h1>
       <p class="mf-lead">Creemos en las personas que se animan a aprender algo nuevo, a probar otra vez y a transformar sus ideas en posibilidades reales.</p>
       <p class="mf-intro">DesarrollAMO nace de esa convicción: la tecnología puede acercarnos, potenciar lo que sabemos y ayudarnos a llegar más lejos. Pero el verdadero motor de cualquier cambio sigue siendo la voluntad humana de superarse.</p>
+      <section class="mf-listen" id="escuchar-manifiesto" aria-labelledby="mf-listen-title" aria-describedby="mf-listen-desc">
+        <div class="mf-listen-head"><span class="mf-listen-icon" aria-hidden="true">♫</span><div><h2 id="mf-listen-title">Escuchá nuestro manifiesto</h2><p id="mf-listen-desc" class="mf-listen-description">Una pausa para escuchar lo que nos mueve. Elegí una voz en español y reproducí el texto completo.</p></div></div>
+        <div class="mf-listen-actions">
+          <button class="mf-listen-primary" type="button" id="mf-play">▶ Escuchar manifiesto</button>
+          <button type="button" id="mf-pause" disabled>⏸ Pausar</button>
+          <button type="button" id="mf-stop" disabled>■ Detener</button>
+          <button type="button" id="mf-preview">♫ Probar voz</button>
+        </div>
+        <label for="mf-voice">Voz del narrador</label>
+        <select id="mf-voice" aria-label="Elegir voz del narrador"><option value="">Voz en español del dispositivo</option></select>
+        <label for="mf-rate">Ritmo de la narración</label>
+        <div class="mf-rate"><input type="range" id="mf-rate" min="0.75" max="1.15" step="0.05" value="0.90" aria-label="Velocidad de lectura" /><output id="mf-rate-label" for="mf-rate">0,90×</output></div>
+        <p class="mf-read-status" id="mf-read-status" role="status" aria-live="polite">La narración usa la voz disponible en tu navegador. Podés escuchar una muestra antes de empezar.</p>
+      </section>
       <div class="mf-actions"><a class="mf-btn mf-btn--pink" href="#superacion">Lo que nos mueve ↓</a><a class="mf-btn mf-btn--outline" href="#sumarse">Cómo ser parte ↗</a></div>
       <div class="mf-promise" aria-label="Tres ideas que nos representan">
         <div class="mf-promise-item"><strong>Aprender</strong>La curiosidad nos pone en movimiento.</div>
@@ -332,5 +369,165 @@ html{scroll-behavior:smooth}
   </div>
 </footer>
 <!-- DESARROLLAMO-FOOTER:END -->
+<script id="mf-narration">
+(() => {
+  "use strict";
+  const root = document.getElementById("contenido");
+  const panel = document.getElementById("escuchar-manifiesto");
+  if (!root || !panel) return;
+  const $ = (id) => document.getElementById(id);
+  const play = $("mf-play"), pause = $("mf-pause"), stop = $("mf-stop");
+  const sample = $("mf-preview"), picker = $("mf-voice");
+  const rate = $("mf-rate"), rateLabel = $("mf-rate-label"), status = $("mf-read-status");
+  if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+    [play, pause, stop, sample, picker, rate].forEach((control) => { control.disabled = true; });
+    status.textContent = "Este navegador no ofrece narración por voz. Podés abrir el manifiesto en Chrome o Edge para probarla.";
+    return;
+  }
+  const synth = window.speechSynthesis;
+  let voices = [], chunks = [], index = 0, reading = false, previewing = false;
+  let generation = 0, highlighted = null;
+  const setStatus = (value) => { status.textContent = value; };
+  const currentVoice = () => voices.find((voice) => voice.voiceURI === picker.value) || null;
+  function voiceScore(voice) {
+    const name = voice.name.toLowerCase(), lang = voice.lang.toLowerCase();
+    let score = lang.startsWith("es-ar") ? 120 : lang.startsWith("es-uy") ? 90 : lang.startsWith("es-mx") ? 75 : lang.startsWith("es") ? 60 : 0;
+    if (/tom[aá]s|elena|google espa[nñ]ol|microsoft.*(spanish|espa[nñ]ol)/i.test(name)) score += 12;
+    if (/natural|neural|premium|enhanced/i.test(name)) score += 15;
+    if (voice.localService) score += 3;
+    return score;
+  }
+  function loadVoices() {
+    const previous = picker.value;
+    voices = synth.getVoices().filter((voice) => /^es(?:-|_|$)/i.test(voice.lang)).sort((a,b) => voiceScore(b) - voiceScore(a));
+    picker.replaceChildren();
+    if (!voices.length) {
+      picker.add(new Option("Voz en español del dispositivo (automática)", ""));
+      picker.disabled = true;
+      return;
+    }
+    voices.forEach((voice) => picker.add(new Option(voice.name + " · " + voice.lang + (voice.localService ? " · instalada" : ""), voice.voiceURI)));
+    picker.disabled = false;
+    picker.value = voices.some((voice) => voice.voiceURI === previous) ? previous : voices[0].voiceURI;
+  }
+  function refreshButtons() {
+    play.textContent = reading && synth.paused ? "▶ Continuar" : reading ? "↺ Volver a empezar" : "▶ Escuchar manifiesto";
+    pause.disabled = !reading;
+    pause.textContent = synth.paused ? "▶ Continuar" : "⏸ Pausar";
+    stop.disabled = !reading && !previewing;
+  }
+  function clearHighlight() {
+    if (highlighted) highlighted.classList.remove("mf-speaking");
+    highlighted = null;
+  }
+  function halt(message) {
+    ++generation;
+    reading = false;
+    previewing = false;
+    chunks = [];
+    index = 0;
+    synth.cancel();
+    clearHighlight();
+    refreshButtons();
+    if (message) setStatus(message);
+  }
+  function splitText(text, node) {
+    const normalized = text.replace(/\s+/g, " ").replace(/DesarrollAMO\.?/gi, "Desarroll Amo").trim();
+    if (!normalized) return [];
+    const parts = normalized.match(/[^.!?…]+[.!?…]+|[^.!?…]+$/g) || [normalized];
+    const result = [];
+    for (const sentence of parts) {
+      let remaining = sentence.trim();
+      while (remaining.length > 175) {
+        let split = remaining.lastIndexOf(" ", 165);
+        if (split < 65) split = 165;
+        result.push({text:remaining.slice(0,split).trim(),node});
+        remaining = remaining.slice(split).trim();
+      }
+      if (remaining) result.push({text:remaining,node});
+    }
+    return result;
+  }
+  function makeChunks() {
+    const selectors = "h1,h2,h3,.mf-kicker,.mf-section-label,.mf-lead,.mf-intro,.mf-promise-item,.mf-copy > p,.mf-panel > p,.mf-note";
+    return Array.from(root.querySelectorAll(selectors))
+      .filter((node) => !node.closest("#escuchar-manifiesto"))
+      .flatMap((node) => splitText(node.textContent || "", node));
+  }
+  function configuredUtterance(text) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    const voice = currentVoice();
+    utterance.lang = voice ? voice.lang : "es-AR";
+    if (voice) utterance.voice = voice;
+    utterance.rate = Number(rate.value);
+    utterance.pitch = 1;
+    utterance.volume = 1;
+    return utterance;
+  }
+  function sayNext(token) {
+    if (token !== generation || !reading) return;
+    if (index >= chunks.length) {
+      halt("Terminó la narración. Gracias por escuchar nuestro manifiesto.");
+      return;
+    }
+    const chunk = chunks[index];
+    if (highlighted !== chunk.node) {
+      clearHighlight();
+      highlighted = chunk.node;
+      highlighted.classList.add("mf-speaking");
+    }
+    const spoken = configuredUtterance(chunk.text);
+    spoken.onstart = () => { if (token === generation && reading) setStatus("Escuchando el manifiesto · fragmento " + (index + 1) + " de " + chunks.length); };
+    spoken.onend = () => { if (token === generation && reading) { ++index; sayNext(token); } };
+    spoken.onerror = (event) => {
+      if (token !== generation) return;
+      if (event.error === "canceled" || event.error === "interrupted") return;
+      halt("No se pudo reproducir la narración en este dispositivo. Probá con otra voz o navegador.");
+    };
+    synth.speak(spoken);
+  }
+  play.addEventListener("click", () => {
+    if (reading && synth.paused) {
+      synth.resume();
+      setStatus("Continuando la narración.");
+      refreshButtons();
+      return;
+    }
+    halt();
+    loadVoices();
+    chunks = makeChunks();
+    if (!chunks.length) { setStatus("No se encontró contenido para narrar."); return; }
+    reading = true;
+    const token = ++generation;
+    refreshButtons();
+    sayNext(token);
+  });
+  pause.addEventListener("click", () => {
+    if (!reading) return;
+    if (synth.paused) { synth.resume(); setStatus("Continuando la narración."); }
+    else { synth.pause(); setStatus("Narración pausada."); }
+    refreshButtons();
+  });
+  stop.addEventListener("click", () => halt("Narración detenida. Podés volver a escucharla desde el principio."));
+  sample.addEventListener("click", () => {
+    halt();
+    loadVoices();
+    previewing = true;
+    const token = ++generation;
+    const utterance = configuredUtterance("Crecer es una decisión. Construir, también. En Desarroll Amo creemos que cada intento nos acerca a nuevas posibilidades.");
+    utterance.onstart = () => { if (token === generation) setStatus("Escuchando una muestra de la voz seleccionada."); };
+    utterance.onend = () => { if (token === generation) { previewing = false; refreshButtons(); setStatus("Muestra terminada. Si te gusta esta voz, escuchá el manifiesto completo."); } };
+    utterance.onerror = () => { if (token === generation) halt("No se pudo probar esta voz. Elegí otra voz o navegador."); };
+    refreshButtons();
+    synth.speak(utterance);
+  });
+  picker.addEventListener("change", () => halt("Voz seleccionada. Probala o empezá a escuchar desde el principio."));
+  rate.addEventListener("input", () => { rateLabel.value = Number(rate.value).toFixed(2).replace(".", ",") + "×"; });
+  window.addEventListener("pagehide", () => { ++generation; synth.cancel(); });
+  loadVoices();
+  if ("addEventListener" in synth) synth.addEventListener("voiceschanged", loadVoices);
+  refreshButtons();
+})();
+</script>
 </body>
 </html>
