@@ -4,8 +4,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Manifiesto — DesarrollAMO</title>
-<meta name="description" content="Framework operativo de DesarrollAMO. Un sistema abierto de evolucion constante."/>
-<link rel="canonical" href="manifiesto.html"/>
+<meta name="description" content="Manifiesto de DesarrollAMO: tecnología con alma, personas primero, conocimiento compartido y nuevas posibilidades para construir el futuro."/>
+<link rel="canonical" href="https://desarrollamo.com.ar/manifiesto"/>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'%3E%3Crect width='64' height='48' rx='8' fill='%230b1020'/%3E%3Cpolygon points='8,40 20,16 32,40' fill='%237DD3FC'/%3E%3Cpolygon points='24,40 36,12 48,40' fill='%23FF77B4'/%3E%3Cpolygon points='40,40 52,20 60,40' fill='%23FF77B4'/%3E%3Ccircle cx='60' cy='26' r='9' fill='%23FFD166'/%3E%3C/svg%3E">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -130,353 +130,99 @@ html{scroll-behavior:smooth}
 </header>
 
 <!-- CONTENIDO PRINCIPAL -->
-<main class="flex-grow pt-24 relative z-10">
-
-  <!-- HERO — Sección 0 / Portada -->
-  <section class="min-h-[70vh] flex flex-col justify-center items-center text-center px-6 py-20">
-    <div class="glass-bg rounded-3xl p-10 md:p-16 shadow-2xl max-w-3xl w-full">
-      <svg viewBox="0 0 80 48" class="mb-8 w-40 md:w-56 mx-auto drop-shadow" aria-hidden="true" focusable="false">
-        <use href="#logo-desarrollamo"/>
-      </svg>
-      <p class="text-xs tracking-[.3em] uppercase text-sky mb-6">DesarrollAMO.Manifiesto</p>
-      <h1 class="mb-6 text-white">
-        Tecnología con <span class="text-pink">alma</span>
-      </h1>
-      <p class="text-xl md:text-2xl text-muted leading-relaxed max-w-xl mx-auto">
-        Construimos soluciones simples, poderosas y accesibles para que más personas conviertan sus ideas en realidad.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-        <a href="#manifiesto" class="btn-sky">Leer Manifiesto</a>
-        <a href="#sumarse" class="btn-pink">Sumarse</a>
-      </div>
-      <div class="divider mt-10"></div>
-    </div>
+<style id="manifesto-page">
+/* Página de manifiesto, marca DesarrollAMO v1.3.0 */
+.mf{--mf-sky:#7DD3FC;--mf-pink:#FF5AA5;--mf-yellow:#FFD166;color:#E8ECF7;isolation:isolate}
+.mf *{box-sizing:border-box}
+.mf .mf-wrap{width:min(1060px,calc(100% - 40px));margin-inline:auto}
+.mf .mf-hero{min-height:min(780px,83svh);display:flex;flex-direction:column;justify-content:center;text-align:center;padding:95px 0;position:relative}
+.mf .mf-kicker{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;font-weight:800;color:var(--mf-sky);margin-bottom:25px}
+.mf .mf-brand{display:block;width:min(295px,62vw);height:auto;margin:0 auto 45px;filter:drop-shadow(0 15px 28px rgba(0,0,0,.25))}
+.mf h1{font-size:clamp(3.2rem,8vw,7.2rem);font-weight:800;line-height:1.025;letter-spacing:-.055em;max-width:1040px;margin:0 auto 30px;text-wrap:balance}
+.mf h1 span,.mf .mf-pink{color:var(--mf-pink)}
+.mf .mf-lead{max-width:730px;margin:0 auto;font-size:clamp(1.12rem,2.1vw,1.5rem);line-height:1.65;color:#DFEAF6}
+.mf .mf-lead strong{color:#FFF;font-weight:700}
+.mf .mf-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:13px;margin-top:35px}
+.mf .mf-btn{display:inline-flex;align-items:center;justify-content:center;min-height:49px;padding:13px 24px;border-radius:999px;font-size:.97rem;font-weight:750;line-height:1.35;text-decoration:none;transition:transform .18s ease,background .18s ease;border:1px solid transparent}
+.mf a:focus-visible{outline:3px solid var(--mf-yellow);outline-offset:4px}
+.mf .mf-btn:hover{transform:translateY(-2px)}
+.mf .mf-btn--pink{color:#0B1020;background:var(--mf-pink)}
+.mf .mf-btn--pink:hover{background:#FF77B4}
+.mf .mf-btn--outline{color:#F3F8FF;background:rgba(125,211,252,.08);border-color:rgba(125,211,252,.5)}
+.mf .mf-btn--outline:hover{background:rgba(125,211,252,.18)}
+.mf .mf-rule{display:block;width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(125,211,252,.42),rgba(255,90,165,.38),transparent)}
+.mf .mf-section{padding:clamp(68px,11vw,122px) 0}
+.mf .mf-section-head{display:grid;grid-template-columns:minmax(130px,1fr) minmax(0,3fr);gap:18px 50px;align-items:start}
+.mf .mf-index{font-size:.73rem;text-transform:uppercase;font-weight:800;letter-spacing:.15em;color:var(--mf-sky);padding-top:13px}
+.mf h2{font-size:clamp(2.15rem,4.9vw,4.2rem);font-weight:800;line-height:1.1;letter-spacing:-.045em;text-wrap:balance;margin:0 0 28px}
+.mf h3{font-size:clamp(1.17rem,2.2vw,1.5rem);font-weight:750;letter-spacing:-.02em;margin:0 0 12px;color:#fff}
+.mf .mf-copy{max-width:740px}
+.mf .mf-copy p{font-size:clamp(1.075rem,1.7vw,1.25rem);line-height:1.85;color:#CAD9E6;margin:0 0 22px}
+.mf .mf-copy p:last-child{margin-bottom:0}
+.mf .mf-callout{max-width:740px;border-left:3px solid var(--mf-pink);padding:12px 0 12px 24px;margin:34px 0 0;font-size:clamp(1.23rem,2vw,1.65rem)!important;line-height:1.55!important;color:#F7FBFF!important;font-weight:650}
+.mf .mf-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:42px}
+.mf .mf-value{border-top:2px solid rgba(125,211,252,.52);padding-top:24px}
+.mf .mf-value:nth-child(2){border-color:rgba(255,90,165,.65)}.mf .mf-value:nth-child(3){border-color:rgba(255,209,102,.7)}
+.mf .mf-value p{color:#C1D2E0;line-height:1.8;font-size:1.05rem;margin:0}
+.mf .mf-highlight{padding:clamp(28px,6vw,64px);background:linear-gradient(115deg,rgba(125,211,252,.095),rgba(255,90,165,.085));border:1px solid rgba(255,255,255,.13);border-radius:26px}
+.mf .mf-highlight p{font-size:clamp(1.15rem,1.75vw,1.35rem);line-height:1.75;color:#DCE8F3;margin:0}
+.mf .mf-invite{text-align:center;padding:clamp(80px,13vw,135px) 0}
+.mf .mf-invite h2{max-width:870px;margin:0 auto 25px}
+.mf .mf-invite p{max-width:705px;margin:0 auto 18px;font-size:clamp(1.08rem,2vw,1.32rem);line-height:1.75;color:#D2E0ED}
+.mf .mf-invite .mf-actions{margin-top:38px}.mf .mf-footnote{margin-top:24px!important;font-size:.9rem!important;color:#AAC0D2!important}
+@media(max-width:740px){.mf .mf-hero{min-height:auto;padding:88px 0 94px}.mf .mf-section-head{grid-template-columns:1fr;gap:12px}.mf .mf-values{grid-template-columns:1fr;gap:27px}.mf .mf-section{padding:70px 0}.mf .mf-brand{margin-bottom:34px}.mf .mf-actions{flex-direction:column;align-items:stretch}.mf .mf-btn{width:100%}.mf .mf-wrap{width:min(100% - 36px,1060px)}}
+@media(prefers-reduced-motion:reduce){.mf .mf-btn{transition:none}.mf .mf-btn:hover{transform:none}}
+</style>
+<main class="mf flex-grow pt-24 relative z-10" id="contenido">
+  <section class="mf-hero mf-wrap" aria-labelledby="mf-title">
+    <img class="mf-brand" src="/static/desarrollamo-brand-horizontal.svg" alt="DesarrollAMO." width="360" height="64" />
+    <p class="mf-kicker">Nuestro manifiesto · Tecnología con alma.</p>
+    <h1 id="mf-title">El futuro no se espera.<br /><span>Se construye.</span></h1>
+    <p class="mf-lead">Creemos en una tecnología que <strong>abre posibilidades</strong>, conecta conocimientos y ayuda a transformar ideas en realidades.</p>
+    <div class="mf-actions"><a class="mf-btn mf-btn--outline" href="#vision">Conocé nuestra visión ↓</a><a class="mf-btn mf-btn--pink" href="#sumarse">Sé parte de DesarrollAMO ↗</a></div>
   </section>
-
-  <!-- 1. APERTURA INSPIRADORA -->
-  <section class="px-6 py-20" id="manifiesto">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-xs tracking-[.3em] uppercase text-sky text-center mb-4">01 — Apertura inspiradora</p>
-      <div class="glass-bg rounded-3xl p-10 md:p-14 shadow-xl">
-        <h2 class="text-white mb-6 text-center">
-          Desarroll<span class="text-pink">AMO</span> no nace para seguir tendencias, <span class="text-orange">nace para crearlas.</span>
-        </h2>
-        <p class="text-lg text-gray-200 leading-relaxed text-center">
-          Somos el puente entre tu idea y su realización, el impulso que convierte sueños en realidades digitales.
-        </p>
-        <div class="divider mt-10 mb-6"></div>
-        <div class="flex flex-col md:flex-row gap-4 justify-center text-center">
-          <div class="card-glass p-5 flex-1">
-            <p class="text-sky font-semibold text-sm uppercase tracking-wider mb-1">Comunidad creativa</p>
-            <p class="text-muted text-sm">Juntos hacemos más</p>
-          </div>
-          <div class="card-glass p-5 flex-1">
-            <p class="text-pink font-semibold text-sm uppercase tracking-wider mb-1">Comunidad en movimiento</p>
-            <p class="text-muted text-sm">Siempre evolucionando</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="mf-wrap"><span class="mf-rule" aria-hidden="true"></span></div>
+  <section class="mf-section mf-wrap" id="vision" aria-labelledby="mf-vision">
+    <div class="mf-section-head"><p class="mf-index">01 / Nuestra visión</p><div class="mf-copy">
+      <h2 id="mf-vision">La tecnología tiene sentido cuando <span class="mf-pink">acerca oportunidades.</span></h2>
+      <p>Una buena idea no debería quedarse en el camino por falta de herramientas, tiempo o conocimientos técnicos. Creemos en un futuro donde más personas puedan aprender, crear, emprender y encontrar nuevas maneras de resolver lo que hoy parece difícil.</p>
+      <p>La creatividad humana, el desarrollo de software y la inteligencia artificial pueden ampliar nuestras capacidades. Lo importante no es la tecnología por sí misma, sino lo que nos permite hacer con ella.</p>
+      <p class="mf-callout">No se trata de esperar a que las posibilidades lleguen. Se trata de construirlas.</p>
+    </div></div>
   </section>
-
-  <!-- 2. EL CONTEXTO — POR QUÉ EXISTIMOS -->
-  <section class="px-6 py-20">
-    <div class="max-w-4xl mx-auto">
-      <p class="text-xs tracking-[.3em] uppercase text-sky text-center mb-4">02 — El contexto — Por qué existimos</p>
-      <div class="glass-bg rounded-3xl p-10 md:p-14 shadow-xl mb-6">
-        <p class="text-lg md:text-xl text-gray-200 leading-relaxed text-center mb-8">
-          La tecnología promete facilitar, pero a menudo complica. Se vuelve exclusiva, llena de jerga, interfaces hostiles y procesos interminables. Las buenas ideas quedan atrapadas en un <span class="text-orange font-semibold">"algún día"</span>.
-        </p>
-        <div class="divider mb-8"></div>
-        <div class="space-y-5">
-          <div class="flex items-start gap-4">
-            <span class="text-pink text-xl mt-0.5">✗</span>
-            <p class="text-gray-200 text-base"><span class="text-white font-semibold">Fricción innecesaria:</span> flujos confusos, datos dispersos, herramientas que no conversan.</p>
-          </div>
-          <div class="flex items-start gap-4">
-            <span class="text-pink text-xl mt-0.5">✗</span>
-            <p class="text-gray-200 text-base"><span class="text-white font-semibold">Elitismo tecnológico:</span> soluciones diseñadas para devs, no para personas.</p>
-          </div>
-          <div class="flex items-start gap-4">
-            <span class="text-pink text-xl mt-0.5">✗</span>
-            <p class="text-gray-200 text-base"><span class="text-white font-semibold">Pérdida de tiempo:</span> lo que debería automatizarse, no se automatiza.</p>
-          </div>
-        </div>
-        <div class="divider mt-8 mb-6"></div>
-        <p class="text-center text-muted text-base italic">
-          DesarrollAMO existe para revertir esa inercia.
-        </p>
+  <div class="mf-wrap"><span class="mf-rule" aria-hidden="true"></span></div>
+  <section class="mf-section mf-wrap" id="principios" aria-labelledby="mf-principios">
+    <div class="mf-section-head"><p class="mf-index">02 / Nuestra filosofía</p><div>
+      <h2 id="mf-principios">El progreso se construye <span class="mf-pink">con personas.</span></h2>
+      <div class="mf-values">
+        <div class="mf-value"><h3>Personas primero</h3><p>La tecnología debe acompañar las decisiones humanas, respetar la autonomía y ser comprensible para quienes la utilizan.</p></div>
+        <div class="mf-value"><h3>Conocimiento compartido</h3><p>Cada experiencia y cada mirada aportan algo. Creemos en aprender, intercambiar ideas y crecer mediante la colaboración.</p></div>
+        <div class="mf-value"><h3>Creatividad con responsabilidad</h3><p>Innovar también es escuchar, cuestionar, probar y mejorar. Elegimos crear soluciones útiles antes que perseguir novedades por sí mismas.</p></div>
       </div>
-      <div class="card-glass p-8 text-center">
-        <p class="text-sky text-2xl font-bold mb-2">Tecnología enfocada en personas</p>
-        <p class="text-muted text-sm">Esa es nuestra bandera</p>
-      </div>
-    </div>
+    </div></div>
   </section>
-
-  <!-- 3. LO QUE DEFENDEMOS — NUESTROS PRINCIPIOS -->
-  <section class="px-6 py-20">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-xs tracking-[.3em] uppercase text-sky text-center mb-4">03 — Lo que defendemos — Nuestros principios</p>
-      <h2 class="text-white mb-10 text-center">Nuestros <span class="text-pink">principios</span></h2>
-      <div class="space-y-5">
-        <div class="card-glass p-7 flex items-start gap-5">
-          <span class="text-orange text-2xl mt-0.5">💡</span>
-          <div>
-            <p class="text-white font-semibold text-lg mb-1">Simplicidad</p>
-            <p class="text-muted">La máxima sofisticación es hacer las cosas fáciles.</p>
-          </div>
-        </div>
-        <div class="card-glass p-7 flex items-start gap-5">
-          <span class="text-pink text-2xl mt-0.5">🤝</span>
-          <div>
-            <p class="text-white font-semibold text-lg mb-1">Tecnología humana</p>
-            <p class="text-muted">Al servicio de las personas, no por encima de ellas.</p>
-          </div>
-        </div>
-        <div class="card-glass p-7 flex items-start gap-5">
-          <span class="text-sky text-2xl mt-0.5">🌍</span>
-          <div>
-            <p class="text-white font-semibold text-lg mb-1">Accesibilidad</p>
-            <p class="text-muted">La innovación no debe ser un privilegio, debe ser un derecho.</p>
-          </div>
-        </div>
-        <div class="card-glass p-7 flex items-start gap-5">
-          <span class="text-orange text-2xl mt-0.5">🧩</span>
-          <div>
-            <p class="text-white font-semibold text-lg mb-1">Colaboración</p>
-            <p class="text-muted">Juntos creamos más y mejor.</p>
-          </div>
-        </div>
-        <div class="card-glass p-7 flex items-start gap-5">
-          <span class="text-pink text-2xl mt-0.5">🧭</span>
-          <div>
-            <p class="text-white font-semibold text-lg mb-1">Adaptabilidad</p>
-            <p class="text-muted">Cada idea es única y merece una solución a su medida.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="mf-wrap"><span class="mf-rule" aria-hidden="true"></span></div>
+  <section class="mf-section mf-wrap" id="compromiso" aria-labelledby="mf-compromiso">
+    <div class="mf-section-head"><p class="mf-index">03 / Nuestro compromiso</p><div class="mf-copy">
+      <h2 id="mf-compromiso">De las ideas a las <span class="mf-pink">soluciones reales.</span></h2>
+      <p>En DesarrollAMO buscamos que el desarrollo tecnológico se traduzca en herramientas claras, experiencias accesibles y oportunidades concretas para personas, proyectos y organizaciones.</p>
+      <p>Trabajamos con curiosidad, honestidad y vocación de mejora continua. Escuchamos cada necesidad, respetamos la confianza de quienes se acercan y valoramos lo que puede construirse en conjunto.</p>
+      <div class="mf-highlight"><p><strong>Desarrollar es mucho más que escribir código.</strong> Es conectar ideas, conocimientos y personas para que algo que antes no existía pueda empezar a existir.</p></div>
+    </div></div>
   </section>
-
-  <!-- 4. NUESTRA VISIÓN Y PROPÓSITO -->
-  <section class="px-6 py-20">
-    <div class="max-w-4xl mx-auto">
-      <p class="text-xs tracking-[.3em] uppercase text-sky text-center mb-4">04 — Nuestra visión y propósito</p>
-      <div class="glass-bg rounded-3xl p-10 md:p-14 shadow-xl text-center mb-6">
-        <h2 class="text-white mb-6">
-          De la idea a la <span class="text-pink">realidad</span>
-        </h2>
-        <p class="text-lg text-gray-200 leading-relaxed mb-8 max-w-2xl mx-auto">
-          Un mundo donde cualquiera pueda transformar una idea en una solución real, con herramientas comprensibles, útiles y sostenibles. No hacemos tecnología para presumirla: <span class="accent-cyan">la hacemos para usarla.</span>
-        </p>
-        <div class="divider mb-8"></div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div class="card-glass p-6 text-center">
-            <p class="text-orange text-2xl font-bold mb-2">↑</p>
-            <p class="text-sky font-semibold text-sm mb-1">Velocidad de prototipado</p>
-            <p class="text-muted text-xs">t → valor entregado ↑</p>
-          </div>
-          <div class="card-glass p-6 text-center">
-            <p class="text-pink text-2xl font-bold mb-2">↓</p>
-            <p class="text-sky font-semibold text-sm mb-1">Complejidad → Simplicidad</p>
-            <p class="text-muted text-xs">reducción de fricción</p>
-          </div>
-          <div class="card-glass p-6 text-center">
-            <p class="text-sky text-2xl font-bold mb-2">{ }</p>
-            <p class="text-sky font-semibold text-sm mb-1">Adaptive JSON</p>
-            <p class="text-muted text-xs">estructura flexible • crecimiento</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="mf-wrap"><span class="mf-rule" aria-hidden="true"></span></div>
+  <section class="mf-invite mf-wrap" id="sumarse" aria-labelledby="mf-sumarse">
+    <p class="mf-kicker">04 / Una invitación abierta</p>
+    <h2 id="mf-sumarse">Las grandes ideas no se construyen <span class="mf-pink">en soledad.</span></h2>
+    <p>Si tenés una idea que querés hacer realidad, conocimientos para compartir o una propuesta de colaboración, nos interesa conocerte.</p>
+    <p>También podés apoyar el crecimiento de DesarrollAMO con un aporte voluntario. Cada forma de participación puede abrir nuevas posibilidades.</p>
+    <p><strong>El futuro también se construye con vos.</strong></p>
+    <div class="mf-actions">
+      <a class="mf-btn mf-btn--pink" href="https://www.instagram.com/desarrollamoficial/" target="_blank" rel="noopener noreferrer" aria-label="Conversar con DesarrollAMO por Instagram (abre una pestaña nueva)">Conversemos ↗</a>
+      <a class="mf-btn mf-btn--outline" href="/apoyar">Apoyar a DesarrollAMO ↗</a>
+      <a class="mf-btn mf-btn--outline" href="/servicios">Conocer nuestros servicios ↗</a>
+    </div><p class="mf-footnote">Tecnología con alma. · DesarrollAMO.</p>
   </section>
-
-  <!-- 5. NUESTRO MÉTODO -->
-  <section class="px-6 py-20">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-xs tracking-[.3em] uppercase text-sky text-center mb-4">05 — Nuestro método</p>
-      <h2 class="text-white mb-10 text-center">Cómo <span class="text-pink">operamos</span></h2>
-      <div class="space-y-5">
-        <div class="card-glass p-7 flex items-start gap-5">
-          <span class="accent-cyan text-2xl font-bold mt-0.5">01</span>
-          <div>
-            <p class="text-white font-semibold text-lg mb-1">Escuchar y mapear</p>
-            <p class="text-muted">Entendemos contexto, datos y objetivo.</p>
-          </div>
-        </div>
-        <div class="card-glass p-7 flex items-start gap-5">
-          <span class="accent-cyan text-2xl font-bold mt-0.5">02</span>
-          <div>
-            <p class="text-white font-semibold text-lg mb-1">Prototipo rápido</p>
-            <p class="text-muted">Probamos con usuarios reales.</p>
-          </div>
-        </div>
-        <div class="card-glass p-7 flex items-start gap-5">
-          <span class="accent-cyan text-2xl font-bold mt-0.5">03</span>
-          <div>
-            <p class="text-white font-semibold text-lg mb-1">Iteración guiada por datos</p>
-            <p class="text-muted">Medimos y ajustamos.</p>
-          </div>
-        </div>
-        <div class="card-glass p-7 flex items-start gap-5">
-          <span class="accent-cyan text-2xl font-bold mt-0.5">04</span>
-          <div>
-            <p class="text-white font-semibold text-lg mb-1">Entrega continua</p>
-            <p class="text-muted">Valor usable desde el día 1.</p>
-          </div>
-        </div>
-        <div class="card-glass p-7 flex items-start gap-5">
-          <span class="accent-cyan text-2xl font-bold mt-0.5">05</span>
-          <div>
-            <p class="text-white font-semibold text-lg mb-1">Documentación simple</p>
-            <p class="text-muted">Que cualquiera pueda continuar.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. PILARES -->
-  <section class="px-6 py-20">
-    <div class="max-w-4xl mx-auto">
-      <p class="text-xs tracking-[.3em] uppercase text-sky text-center mb-4">06 — Pilares</p>
-      <h2 class="text-white mb-10 text-center">Lo que nos <span class="text-orange">sostiene</span></h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="card-glass p-8 text-center">
-          <p class="text-sky text-3xl mb-4">⚙️</p>
-          <h3 class="text-white font-bold text-lg mb-3">Simplicidad funcional</h3>
-          <p class="text-muted text-sm leading-relaxed">Cada clic tiene un porqué. Nada sobra.</p>
-        </div>
-        <div class="card-glass p-8 text-center">
-          <p class="text-pink text-3xl mb-4">♿</p>
-          <h3 class="text-white font-bold text-lg mb-3">Accesibilidad real</h3>
-          <p class="text-muted text-sm leading-relaxed">Interfaces claras, lenguaje sin jerga y guías prácticas.</p>
-        </div>
-        <div class="card-glass p-8 text-center">
-          <p class="text-orange text-3xl mb-4">📈</p>
-          <h3 class="text-white font-bold text-lg mb-3">Escalabilidad humana</h3>
-          <p class="text-muted text-sm leading-relaxed">Sistemas que crecen al ritmo de las personas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. NUESTROS COMPROMISOS -->
-  <section class="px-6 py-20">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-xs tracking-[.3em] uppercase text-sky text-center mb-4">07 — Nuestros compromisos</p>
-      <h2 class="text-white mb-10 text-center">Con lo que <span class="text-sky">contamos</span></h2>
-      <div class="glass-bg rounded-3xl p-10 shadow-xl">
-        <div class="space-y-6">
-          <div class="flex items-start gap-5">
-            <span class="text-sky text-xl mt-0.5">→</span>
-            <p class="text-gray-100 font-medium text-base"><span class="text-white font-semibold">Transparencia en decisiones:</span> explicamos el porqué detrás del cómo.</p>
-          </div>
-          <div class="flex items-start gap-5">
-            <span class="text-sky text-xl mt-0.5">→</span>
-            <p class="text-gray-100 font-medium text-base"><span class="text-white font-semibold">Propiedad de tus datos:</span> estructuras abiertas, exportables.</p>
-          </div>
-          <div class="flex items-start gap-5">
-            <span class="text-sky text-xl mt-0.5">→</span>
-            <p class="text-gray-100 font-medium text-base"><span class="text-white font-semibold">Tiempo bien invertido:</span> automatizamos lo repetitivo.</p>
-          </div>
-          <div class="flex items-start gap-5">
-            <span class="text-sky text-xl mt-0.5">→</span>
-            <p class="text-gray-100 font-medium text-base"><span class="text-white font-semibold">Diseño responsable:</span> accesible, inclusivo y útil.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. DEMOS RÁPIDAS -->
-  <section class="px-6 py-20">
-    <div class="max-w-4xl mx-auto">
-      <p class="text-xs tracking-[.3em] uppercase text-sky text-center mb-4">08 — Demos rápidas</p>
-      <h2 class="text-white mb-10 text-center">Lo que <span class="text-pink">hacemos</span></h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="card-glass p-8 text-center">
-          <p class="text-3xl mb-4">💬</p>
-          <h3 class="text-white font-bold text-lg mb-2">Chatbot Krow</h3>
-          <p class="text-muted text-sm mb-4 leading-relaxed">Respuestas útiles desde JSON local. UX simple.</p>
-          <a href="/" class="btn-sky text-sm py-2 px-5">Ver más</a>
-        </div>
-        <div class="card-glass p-8 text-center">
-          <p class="text-3xl mb-4">🐄</p>
-          <h3 class="text-white font-bold text-lg mb-2">Gestor Ganadero</h3>
-          <p class="text-muted text-sm mb-4 leading-relaxed">Datos parentales, campos extra y vistas claras.</p>
-          <a href="/" class="btn-sky text-sm py-2 px-5">Ver más</a>
-        </div>
-        <div class="card-glass p-8 text-center">
-          <p class="text-3xl mb-4">📊</p>
-          <h3 class="text-white font-bold text-lg mb-2">KrowStation</h3>
-          <p class="text-muted text-sm mb-4 leading-relaxed">Orden y precios desde planillas desprolijas.</p>
-          <a href="/" class="btn-sky text-sm py-2 px-5">Ver más</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. PREGUNTAS FRECUENTES -->
-  <section class="px-6 py-20">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-xs tracking-[.3em] uppercase text-sky text-center mb-4">09 — Preguntas frecuentes</p>
-      <h2 class="text-white mb-10 text-center"><span class="text-orange">FAQ</span></h2>
-      <div class="space-y-4">
-        <div class="card-glass p-7">
-          <p class="text-sky font-semibold text-base mb-2">¿Necesito saber programar?</p>
-          <p class="text-muted text-sm">No. Diseñamos para personas, no para desarrolladores. El código es nuestro trabajo, no el tuyo.</p>
-        </div>
-        <div class="card-glass p-7">
-          <p class="text-sky font-semibold text-base mb-2">¿Cómo evitamos quedar atados?</p>
-          <p class="text-muted text-sm">Estructuras abiertas y exportables. Tus datos son tuyos siempre. Sin vendor lock-in.</p>
-        </div>
-        <div class="card-glass p-7">
-          <p class="text-sky font-semibold text-base mb-2">¿En cuánto tiempo veo algo funcionando?</p>
-          <p class="text-muted text-sm">Valor usable desde el día 1. Prototipamos rápido y entregamos continuo.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. CIERRE Y LLAMADO -->
-  <section class="amo-manifesto-support" id="sostenibilidad" aria-labelledby="amo-apoyo-manifiesto">
-  <div class="amo-kicker">Sostenibilidad · libertad para apoyar</div>
-  <h2 id="amo-apoyo-manifiesto">Cómo se sostiene DesarrollAMO y qué significa apoyarlo.</h2>
-  <p>DesarrollAMO trabaja desarrollando soluciones tecnológicas para clientes y construyendo herramientas propias. La contratación de servicios es una actividad comercial: cada encargo tiene un presupuesto, un alcance y condiciones acordadas. Además, quien valore el proyecto puede decidir <strong>acompañarlo económicamente de manera voluntaria</strong>.</p>
-  <p>Un aporte de apoyo no es el pago de un encargo, una reserva, una inversión ni una compra de participación. No promete beneficios económicos, acceso preferencial, funcionalidades, entregas, soporte individual ni resultados futuros. Apoyar es opcional: no condiciona el uso de nuestras páginas públicas ni reemplaza la contratación de un servicio.</p>
-  <p>Los planes de apoyo disponibles en Mercado Pago pueden cobrarse de forma recurrente, con frecuencia semanal, quincenal o mensual y el importe que elija la persona al suscribirse. El monto y la periodicidad se muestran antes de confirmar el pago; la suscripción puede gestionarse o cancelarse desde Mercado Pago.</p>
-  <p>Para una colaboración puntual sin suscripción también están disponibles los datos públicos de cobro de CobrAMO. Nunca presentamos un aporte voluntario como un pago obligatorio ni informamos un trabajo como abonado por el solo hecho de recibir una intención de pago.</p>
-  <a class="amo-support-link" href="/apoyar">Conocer las opciones de apoyo →</a>
-  <a href="/servicios#precios" style="display:inline-flex;color:#7dd3fc;margin:14px 0 0 16px;font-weight:700">Ver servicios y precios →</a>
-</section>
-
-<section class="px-6 py-20" id="sumarse">
-    <div class="max-w-3xl mx-auto text-center">
-      <div class="glass-bg rounded-3xl p-12 md:p-16 shadow-2xl">
-        <h2 class="text-white mb-6">
-          No solo desarrollamos sistemas.<br>
-          <span class="text-pink">Desarrollamos posibilidades.</span>
-        </h2>
-        <p class="text-lg text-gray-200 leading-relaxed mb-8 max-w-xl mx-auto">
-          No importa si empezás con hoja en blanco o con caos de datos: en DesarrollAMO le damos forma, orden y vida. Convertimos lo complicado en claro, lo lento en rápido, lo imposible en usable.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <a href="/" class="btn-pink">Quiero crear con DesarrollAMO</a>
-          <a href="#manifiesto" class="btn-sky">Ver principios</a>
-        </div>
-        <div class="divider mb-8"></div>
-        <h3 class="text-white font-bold text-lg mb-4">Contacto</h3>
-        <p class="text-muted text-sm mb-4">Contactanos por Instagram:</p>
-        <p class="text-sky font-semibold text-base mb-2">📷 Instagram: @desarrollamoficial</p>
-        <p class="text-muted text-xs mb-8">Política de respuesta: priorizamos perfiles reales. Si detectamos que un perfil es falso, no respondemos.</p>
-        <div class="divider mb-6"></div>
-        <p class="text-muted text-xs">Página desarrollada por <a href="/" class="text-sky hover:opacity-75 transition">DesarrollAMO</a>. © 2026</p>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <!-- FOOTER — mismo que home -->
@@ -486,6 +232,7 @@ html{scroll-behavior:smooth}
 <!-- Animaciones fade-in -->
 <script>
 </script>
+
 
 
 
