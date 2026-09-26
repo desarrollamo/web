@@ -210,6 +210,23 @@ body > footer.amo-footer .amo-footer__legal a{color:#D1D8E5}
 .mf .mf-listen .mf-rate output{font-variant-numeric:tabular-nums;white-space:nowrap;color:#FFF}
 .mf .mf-listen .mf-read-status{min-height:1.65em;margin:13px 0 0;color:#D8E9FB;font-size:.94rem;line-height:1.5}
 .mf .mf-speaking{outline:2px solid rgba(255,209,102,.75);outline-offset:5px;border-radius:4px}
+/* Reproductor flotante: fondo semitransparente al 50%; controles y letras opacos. */
+.mf .mf-player-toggle{position:fixed;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:calc(14px + env(safe-area-inset-left,0px));z-index:95;display:inline-flex;align-items:center;gap:9px;padding:11px 17px;border:1px solid rgba(125,211,252,.8);border-radius:999px;background:rgba(10,22,38,.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#fff;font:750 .94rem/1.35 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+.mf .mf-player-toggle:hover,.mf .mf-player-toggle:focus-visible{background:rgba(10,22,38,.78)}
+.mf .mf-listen{position:fixed;bottom:calc(76px + env(safe-area-inset-bottom,0px));left:calc(14px + env(safe-area-inset-left,0px));z-index:95;width:min(365px,calc(100vw - 28px));max-height:min(69dvh,575px);overflow-y:auto;margin:0;padding:18px;background:rgba(10,22,38,.5);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(125,211,252,.65);border-radius:18px;text-align:left;box-shadow:0 10px 35px rgba(0,0,0,.25);overscroll-behavior:contain}
+.mf .mf-listen[hidden]{display:none!important}
+.mf .mf-listen-head{margin-bottom:8px;gap:10px}
+.mf .mf-listen-icon{padding:8px;font-size:1.15rem}
+.mf .mf-listen h2{font-size:1.12rem;margin:0 0 3px}
+.mf .mf-listen .mf-listen-description{font-size:.83rem;line-height:1.35;color:#f7faff}
+.mf .mf-listen-actions{gap:7px}
+.mf .mf-listen button{min-height:39px;padding:8px 12px;font-size:.85rem}
+.mf .mf-listen label{margin:10px 0 5px;font-size:.86rem}
+.mf .mf-listen label small{font-size:.76rem;color:#fff;font-weight:500}
+.mf .mf-listen select{min-height:40px;font-size:.85rem}
+.mf .mf-listen .mf-read-status{margin:8px 0 0;font-size:.8rem;color:#fff}
+@media(max-width:760px){.mf .mf-listen{padding:14px;max-height:58dvh}.mf .mf-listen-actions button{flex:1 1 42%}.mf .mf-player-toggle{padding:10px 14px}}
+
 @media(max-width:760px){.mf .mf-listen{padding:18px}.mf .mf-listen-actions button{flex:1}.mf .mf-listen-head{align-items:flex-start}}
 </style>
 <main class="mf flex-grow pt-24 relative z-10" id="contenido">
@@ -220,7 +237,8 @@ body > footer.amo-footer .amo-footer__legal a{color:#D1D8E5}
       <h1 id="mf-title">Crecer es una decisión.<br><span>Construir, también.</span></h1>
       <p class="mf-lead">Creemos en las personas que se animan a aprender algo nuevo, a probar otra vez y a transformar sus ideas en posibilidades reales.</p>
       <p class="mf-intro">DesarrollAMO nace de esa convicción: la tecnología puede acercarnos, potenciar lo que sabemos y ayudarnos a llegar más lejos. Pero el verdadero motor de cualquier cambio sigue siendo la voluntad humana de superarse.</p>
-      <section class="mf-listen" id="escuchar-manifiesto" aria-labelledby="mf-listen-title" aria-describedby="mf-listen-desc">
+      <button type="button" class="mf-player-toggle" id="mf-player-toggle" aria-expanded="false" aria-controls="escuchar-manifiesto" aria-label="Abrir narrador del manifiesto">♫ <span>Escuchar manifiesto</span></button>
+      <section class="mf-listen" id="escuchar-manifiesto" hidden aria-labelledby="mf-listen-title" aria-describedby="mf-listen-desc">
         <div class="mf-listen-head"><span class="mf-listen-icon" aria-hidden="true">♫</span><div><h2 id="mf-listen-title">Escuchá nuestro manifiesto</h2><p id="mf-listen-desc" class="mf-listen-description">Una pausa para escuchar lo que nos mueve. Elegí una voz en español y reproducí el texto completo.</p></div></div>
         <div class="mf-listen-actions">
           <button class="mf-listen-primary" type="button" id="mf-play">▶ Escuchar manifiesto</button>
@@ -230,7 +248,7 @@ body > footer.amo-footer .amo-footer__legal a{color:#D1D8E5}
         </div>
         <label for="mf-voice">Voz del narrador</label>
         <select id="mf-voice" aria-label="Elegir voz del narrador"><option value="">Voz en español del dispositivo</option></select>
-        <label for="mf-rate">Ritmo de la narración</label>
+        <label for="mf-rate">Ritmo de la narración <small id="mf-rate-limit">· máx. según la voz</small></label>
         <div class="mf-rate"><input type="range" id="mf-rate" min="0.75" max="5.00" step="0.05" value="0.90" aria-label="Velocidad de lectura" /><output id="mf-rate-label" for="mf-rate">0,90×</output></div>
         <p class="mf-read-status" id="mf-read-status" role="status" aria-live="polite">La narración usa la voz disponible en tu navegador. Podés escuchar una muestra antes de empezar.</p>
       </section>
@@ -378,7 +396,16 @@ body > footer.amo-footer .amo-footer__legal a{color:#D1D8E5}
   const $ = (id) => document.getElementById(id);
   const play = $("mf-play"), pause = $("mf-pause"), stop = $("mf-stop");
   const sample = $("mf-preview"), picker = $("mf-voice");
-  const rate = $("mf-rate"), rateLabel = $("mf-rate-label"), status = $("mf-read-status");
+  const rate = $("mf-rate"), rateLabel = $("mf-rate-label"), rateLimit = $("mf-rate-limit"), status = $("mf-read-status");
+  const toggle = $("mf-player-toggle");
+  function setPanel(open) {
+    panel.hidden = !open;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Cerrar narrador del manifiesto" : "Abrir narrador del manifiesto");
+    toggle.querySelector("span").textContent = open ? "Cerrar narrador" : "Escuchar manifiesto";
+  }
+  toggle.addEventListener("click", () => setPanel(panel.hidden));
+  panel.addEventListener("keydown", (event) => { if (event.key === "Escape") { setPanel(false); toggle.focus(); } });
   if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
     [play, pause, stop, sample, picker, rate].forEach((control) => { control.disabled = true; });
     status.textContent = "Este navegador no ofrece narración por voz. Podés abrir el manifiesto en Chrome o Edge para probarla.";
@@ -389,6 +416,16 @@ body > footer.amo-footer .amo-footer__legal a{color:#D1D8E5}
   let generation = 0, highlighted = null;
   const setStatus = (value) => { status.textContent = value; };
   const currentVoice = () => voices.find((voice) => voice.voiceURI === picker.value) || null;
+  // Google: límite práctico conservador de 2× según pruebas de escucha.
+  // Otras voces: control hasta 5×; la velocidad real depende del motor y del navegador.
+  const maxRate = () => { const voice = currentVoice(); return !voice || /google/i.test(voice.name + " " + voice.voiceURI) ? 2 : 5; };
+  function updateRateLimit() {
+    const maximum = maxRate();
+    rate.max = maximum.toFixed(2);
+    if (Number(rate.value) > maximum) rate.value = maximum.toFixed(2);
+    rateLabel.value = Number(rate.value).toFixed(2).replace(".", ",") + "×";
+    rateLimit.textContent = "· máximo " + maximum.toFixed(2).replace(".", ",") + "× para esta voz";
+  }
   function voiceScore(voice) {
     const name = voice.name.toLowerCase(), lang = voice.lang.toLowerCase();
     let score = lang.startsWith("es-ar") ? 120 : lang.startsWith("es-uy") ? 90 : lang.startsWith("es-mx") ? 75 : lang.startsWith("es") ? 60 : 0;
@@ -402,13 +439,15 @@ body > footer.amo-footer .amo-footer__legal a{color:#D1D8E5}
     voices = synth.getVoices().filter((voice) => /^es(?:-|_|$)/i.test(voice.lang)).sort((a,b) => voiceScore(b) - voiceScore(a));
     picker.replaceChildren();
     if (!voices.length) {
-      picker.add(new Option("Voz en español del dispositivo (automática)", ""));
+      picker.add(new Option("Voz en español del dispositivo (automática · hasta 2×)", ""));
       picker.disabled = true;
+      updateRateLimit();
       return;
     }
-    voices.forEach((voice) => picker.add(new Option(voice.name + " · " + voice.lang + (voice.localService ? " · instalada" : ""), voice.voiceURI)));
+    voices.forEach((voice) => picker.add(new Option(voice.name + " · " + voice.lang + (/google/i.test(voice.name + " " + voice.voiceURI) ? " · hasta 2×" : " · hasta 5×") + (voice.localService ? " · instalada" : ""), voice.voiceURI)));
     picker.disabled = false;
     picker.value = voices.some((voice) => voice.voiceURI === previous) ? previous : voices[0].voiceURI;
+    updateRateLimit();
   }
   function refreshButtons() {
     play.textContent = reading && synth.paused ? "▶ Continuar" : reading ? "↺ Volver a empezar" : "▶ Escuchar manifiesto";
@@ -459,7 +498,7 @@ body > footer.amo-footer .amo-footer__legal a{color:#D1D8E5}
     const voice = currentVoice();
     utterance.lang = voice ? voice.lang : "es-AR";
     if (voice) utterance.voice = voice;
-    utterance.rate = Number(rate.value);
+    utterance.rate = Math.min(Number(rate.value), maxRate());
     utterance.pitch = 1;
     utterance.volume = 1;
     return utterance;
@@ -521,8 +560,8 @@ body > footer.amo-footer .amo-footer__legal a{color:#D1D8E5}
     refreshButtons();
     synth.speak(utterance);
   });
-  picker.addEventListener("change", () => halt("Voz seleccionada. Probala o empezá a escuchar desde el principio."));
-  rate.addEventListener("input", () => { rateLabel.value = Number(rate.value).toFixed(2).replace(".", ",") + "×"; });
+  picker.addEventListener("change", () => { halt("Voz seleccionada. Probala o empezá a escuchar desde el principio."); updateRateLimit(); });
+  rate.addEventListener("input", () => { updateRateLimit(); });
   window.addEventListener("pagehide", () => { ++generation; synth.cancel(); });
   loadVoices();
   if ("addEventListener" in synth) synth.addEventListener("voiceschanged", loadVoices);
