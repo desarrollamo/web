@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Manifiesto — DesarrollAMO</title>
-<meta name="description" content="Manifiesto de DesarrollAMO: tecnología con alma, personas primero, conocimiento compartido y nuevas posibilidades para construir el futuro."/>
+<meta name="description" content="Manifiesto de DesarrollAMO: autosuperación, aprendizaje, tecnología con alma y colaboración. Conocé nuestra visión y las distintas formas de participar."/>
 <link rel="canonical" href="https://desarrollamo.com.ar/manifiesto"/>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'%3E%3Crect width='64' height='48' rx='8' fill='%230b1020'/%3E%3Cpolygon points='8,40 20,16 32,40' fill='%237DD3FC'/%3E%3Cpolygon points='24,40 36,12 48,40' fill='%23FF77B4'/%3E%3Cpolygon points='40,40 52,20 60,40' fill='%23FF77B4'/%3E%3Ccircle cx='60' cy='26' r='9' fill='%23FFD166'/%3E%3C/svg%3E">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -131,97 +131,170 @@ html{scroll-behavior:smooth}
 
 <!-- CONTENIDO PRINCIPAL -->
 <style id="manifesto-page">
-/* Página de manifiesto, marca DesarrollAMO v1.3.0 */
-.mf{--mf-sky:#7DD3FC;--mf-pink:#FF5AA5;--mf-yellow:#FFD166;color:#E8ECF7;isolation:isolate}
+/* Sólo manifiesto: identidad DesarrollAMO, branding v1.3.0. */
+.mf{--mf-sky:#7DD3FC;--mf-pink:#FF5AA5;--mf-rose:#FF77B4;--mf-yellow:#FFD166;--mf-text:#F3F7FF;--mf-muted:#D6E3F0;--mf-border:#36475E;--mf-panel:#142238;isolation:isolate;color:var(--mf-text);background:linear-gradient(165deg,#101C31 0%,#0B1424 40%,#0E1A2C 75%,#0A1220 100%);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 .mf *{box-sizing:border-box}
-.mf .mf-wrap{width:min(1060px,calc(100% - 40px));margin-inline:auto}
-.mf .mf-hero{min-height:min(780px,83svh);display:flex;flex-direction:column;justify-content:center;text-align:center;padding:95px 0;position:relative}
-.mf .mf-kicker{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;font-weight:800;color:var(--mf-sky);margin-bottom:25px}
-.mf .mf-brand{display:block;width:min(295px,62vw);height:auto;margin:0 auto 45px;filter:drop-shadow(0 15px 28px rgba(0,0,0,.25))}
-.mf h1{font-size:clamp(3.2rem,8vw,7.2rem);font-weight:800;line-height:1.025;letter-spacing:-.055em;max-width:1040px;margin:0 auto 30px;text-wrap:balance}
-.mf h1 span,.mf .mf-pink{color:var(--mf-pink)}
-.mf .mf-lead{max-width:730px;margin:0 auto;font-size:clamp(1.12rem,2.1vw,1.5rem);line-height:1.65;color:#DFEAF6}
-.mf .mf-lead strong{color:#FFF;font-weight:700}
-.mf .mf-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:13px;margin-top:35px}
-.mf .mf-btn{display:inline-flex;align-items:center;justify-content:center;min-height:49px;padding:13px 24px;border-radius:999px;font-size:.97rem;font-weight:750;line-height:1.35;text-decoration:none;transition:transform .18s ease,background .18s ease;border:1px solid transparent}
+.mf .mf-wrap{width:min(1080px,calc(100% - 48px));margin-inline:auto}
+.mf .mf-hero{text-align:center;padding:clamp(70px,10vw,120px) 24px 88px;background:radial-gradient(ellipse at 50% 25%,rgba(125,211,252,.13),transparent 56%),#0F1B2E;border-bottom:1px solid var(--mf-border)}
+.mf .mf-hero-inner{width:min(950px,100%);margin:auto}
+.mf .mf-brand{display:block;width:min(300px,68vw);height:auto;margin:0 auto 42px}
+.mf .mf-kicker{font-size:.83rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mf-sky);margin:0 0 24px}
+.mf h1{font-size:clamp(3.1rem,7.2vw,6.7rem);line-height:1.04;letter-spacing:-.055em;font-weight:850;margin:0 auto 30px;max-width:1000px;text-wrap:balance;color:#FFF}
+.mf .mf-pink,.mf h1 span{color:var(--mf-rose)}
+.mf .mf-lead{max-width:790px;margin:0 auto 20px;color:#F4F8FF;font-size:clamp(1.22rem,2.45vw,1.65rem);line-height:1.56;font-weight:580}
+.mf .mf-intro{max-width:770px;margin:0 auto;color:var(--mf-muted);font-size:clamp(1.05rem,1.7vw,1.22rem);line-height:1.75}
+.mf .mf-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;margin-top:32px}
+.mf .mf-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:760;font-size:1rem;line-height:1.35;border:2px solid transparent;transition:transform .18s ease,background .18s ease}
+.mf .mf-btn--pink{background:var(--mf-rose);color:#081223}
+.mf .mf-btn--pink:hover{background:#FF9BCC}
+.mf .mf-btn--outline{background:#182C44;border-color:#79BBD9;color:#F7FAFF}
+.mf .mf-btn--outline:hover{background:#24405B}
 .mf a:focus-visible{outline:3px solid var(--mf-yellow);outline-offset:4px}
 .mf .mf-btn:hover{transform:translateY(-2px)}
-.mf .mf-btn--pink{color:#0B1020;background:var(--mf-pink)}
-.mf .mf-btn--pink:hover{background:#FF77B4}
-.mf .mf-btn--outline{color:#F3F8FF;background:rgba(125,211,252,.08);border-color:rgba(125,211,252,.5)}
-.mf .mf-btn--outline:hover{background:rgba(125,211,252,.18)}
-.mf .mf-rule{display:block;width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(125,211,252,.42),rgba(255,90,165,.38),transparent)}
-.mf .mf-section{padding:clamp(68px,11vw,122px) 0}
-.mf .mf-section-head{display:grid;grid-template-columns:minmax(130px,1fr) minmax(0,3fr);gap:18px 50px;align-items:start}
-.mf .mf-index{font-size:.73rem;text-transform:uppercase;font-weight:800;letter-spacing:.15em;color:var(--mf-sky);padding-top:13px}
-.mf h2{font-size:clamp(2.15rem,4.9vw,4.2rem);font-weight:800;line-height:1.1;letter-spacing:-.045em;text-wrap:balance;margin:0 0 28px}
-.mf h3{font-size:clamp(1.17rem,2.2vw,1.5rem);font-weight:750;letter-spacing:-.02em;margin:0 0 12px;color:#fff}
-.mf .mf-copy{max-width:740px}
-.mf .mf-copy p{font-size:clamp(1.075rem,1.7vw,1.25rem);line-height:1.85;color:#CAD9E6;margin:0 0 22px}
-.mf .mf-copy p:last-child{margin-bottom:0}
-.mf .mf-callout{max-width:740px;border-left:3px solid var(--mf-pink);padding:12px 0 12px 24px;margin:34px 0 0;font-size:clamp(1.23rem,2vw,1.65rem)!important;line-height:1.55!important;color:#F7FBFF!important;font-weight:650}
-.mf .mf-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:42px}
-.mf .mf-value{border-top:2px solid rgba(125,211,252,.52);padding-top:24px}
-.mf .mf-value:nth-child(2){border-color:rgba(255,90,165,.65)}.mf .mf-value:nth-child(3){border-color:rgba(255,209,102,.7)}
-.mf .mf-value p{color:#C1D2E0;line-height:1.8;font-size:1.05rem;margin:0}
-.mf .mf-highlight{padding:clamp(28px,6vw,64px);background:linear-gradient(115deg,rgba(125,211,252,.095),rgba(255,90,165,.085));border:1px solid rgba(255,255,255,.13);border-radius:26px}
-.mf .mf-highlight p{font-size:clamp(1.15rem,1.75vw,1.35rem);line-height:1.75;color:#DCE8F3;margin:0}
-.mf .mf-invite{text-align:center;padding:clamp(80px,13vw,135px) 0}
-.mf .mf-invite h2{max-width:870px;margin:0 auto 25px}
-.mf .mf-invite p{max-width:705px;margin:0 auto 18px;font-size:clamp(1.08rem,2vw,1.32rem);line-height:1.75;color:#D2E0ED}
-.mf .mf-invite .mf-actions{margin-top:38px}.mf .mf-footnote{margin-top:24px!important;font-size:.9rem!important;color:#AAC0D2!important}
-@media(max-width:740px){.mf .mf-hero{min-height:auto;padding:88px 0 94px}.mf .mf-section-head{grid-template-columns:1fr;gap:12px}.mf .mf-values{grid-template-columns:1fr;gap:27px}.mf .mf-section{padding:70px 0}.mf .mf-brand{margin-bottom:34px}.mf .mf-actions{flex-direction:column;align-items:stretch}.mf .mf-btn{width:100%}.mf .mf-wrap{width:min(100% - 36px,1060px)}}
+.mf .mf-promise{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:50px auto 0;max-width:890px}
+.mf .mf-promise-item{padding:20px 17px;background:#192B43;border:1px solid #36506C;border-radius:14px;color:#F3F8FF;font-size:1rem;line-height:1.4;font-weight:700}
+.mf .mf-promise-item strong{color:var(--mf-sky);display:block;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}
+.mf .mf-section{padding:clamp(60px,9vw,105px) 0}
+.mf .mf-section+.mf-section{border-top:1px solid var(--mf-border)}
+.mf .mf-section-label{font-size:.82rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--mf-sky);margin:0 0 17px}
+.mf h2{font-size:clamp(2.05rem,4.6vw,4.2rem);line-height:1.14;letter-spacing:-.042em;color:#FFF;font-weight:800;margin:0 0 31px;max-width:940px;text-wrap:balance}
+.mf h3{font-size:clamp(1.22rem,2.2vw,1.55rem);line-height:1.25;font-weight:780;letter-spacing:-.016em;color:#FFF;margin:0 0 13px}
+.mf .mf-copy{max-width:850px}
+.mf .mf-copy p,.mf .mf-panel p{font-size:clamp(1.08rem,1.7vw,1.22rem);line-height:1.8;color:var(--mf-muted);margin:0 0 20px}
+.mf .mf-copy p:last-child,.mf .mf-panel p:last-child{margin-bottom:0}
+.mf .mf-copy strong,.mf .mf-panel strong{color:#FFF;font-weight:780}
+.mf .mf-standout{margin:34px 0 0;padding:23px 28px;background:#1A2D46;border-left:5px solid var(--mf-rose);border-radius:0 12px 12px 0;color:#FFF;font-size:clamp(1.26rem,2.15vw,1.58rem);line-height:1.6;font-weight:720;max-width:850px}
+.mf .mf-panel{background:var(--mf-panel);border:1px solid var(--mf-border);border-radius:19px;padding:clamp(23px,4vw,37px);box-shadow:0 12px 28px rgba(0,0,0,.16)}
+.mf .mf-panel--warm{border-color:#6B536B;background:#272238}
+.mf .mf-panel--warm h3{color:#FFE4F0}
+.mf .mf-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:33px}
+.mf .mf-cards .mf-panel{height:100%}
+.mf .mf-cards p{font-size:1.05rem;line-height:1.75}
+.mf .mf-no{color:var(--mf-sky);font-weight:850;font-size:.9rem;letter-spacing:.15em;margin:0 0 15px;display:block}
+.mf .mf-community{background:#17263D;border-top:1px solid #364B67;border-bottom:1px solid #364B67}
+.mf .mf-community-inner{padding:clamp(60px,9vw,100px) 0}
+.mf .mf-community .mf-panel{background:#1C304A}
+.mf .mf-community .mf-copy{max-width:900px}
+.mf .mf-community .mf-copy p{color:#E4EDF8}
+.mf .mf-ways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:35px}
+.mf .mf-ways .mf-panel{background:#1A2A40}
+.mf .mf-ways p{font-size:1.06rem}
+.mf .mf-ways .mf-panel:last-child{grid-column:1/-1}
+.mf .mf-ways .mf-panel:last-child h3{color:#FFE4F0}
+.mf .mf-invite{padding:clamp(64px,10vw,120px) 0;text-align:center}
+.mf .mf-invite h2{margin-inline:auto}
+.mf .mf-invite .mf-copy{margin-inline:auto}
+.mf .mf-invite .mf-copy p{color:#E4EDF8}
+.mf .mf-note{font-size:.95rem!important;color:#D2DFEC!important;margin:22px auto 0!important}
+@media(max-width:760px){.mf .mf-hero{padding:70px 18px 62px}.mf .mf-wrap{width:min(100% - 36px,1080px)}.mf .mf-promise,.mf .mf-cards,.mf .mf-ways{grid-template-columns:1fr}.mf .mf-ways .mf-panel:last-child{grid-column:auto}.mf .mf-brand{margin-bottom:30px}.mf .mf-actions{flex-direction:column;align-items:stretch}.mf .mf-btn{width:100%}.mf .mf-section{padding:63px 0}.mf .mf-standout{padding:20px 21px}}
 @media(prefers-reduced-motion:reduce){.mf .mf-btn{transition:none}.mf .mf-btn:hover{transform:none}}
 </style>
 <main class="mf flex-grow pt-24 relative z-10" id="contenido">
-  <section class="mf-hero mf-wrap" aria-labelledby="mf-title">
-    <img class="mf-brand" src="/static/desarrollamo-brand-horizontal.svg" alt="DesarrollAMO." width="360" height="64" />
-    <p class="mf-kicker">Nuestro manifiesto · Tecnología con alma.</p>
-    <h1 id="mf-title">El futuro no se espera.<br /><span>Se construye.</span></h1>
-    <p class="mf-lead">Creemos en una tecnología que <strong>abre posibilidades</strong>, conecta conocimientos y ayuda a transformar ideas en realidades.</p>
-    <div class="mf-actions"><a class="mf-btn mf-btn--outline" href="#vision">Conocé nuestra visión ↓</a><a class="mf-btn mf-btn--pink" href="#sumarse">Sé parte de DesarrollAMO ↗</a></div>
-  </section>
-  <div class="mf-wrap"><span class="mf-rule" aria-hidden="true"></span></div>
-  <section class="mf-section mf-wrap" id="vision" aria-labelledby="mf-vision">
-    <div class="mf-section-head"><p class="mf-index">01 / Nuestra visión</p><div class="mf-copy">
-      <h2 id="mf-vision">La tecnología tiene sentido cuando <span class="mf-pink">acerca oportunidades.</span></h2>
-      <p>Una buena idea no debería quedarse en el camino por falta de herramientas, tiempo o conocimientos técnicos. Creemos en un futuro donde más personas puedan aprender, crear, emprender y encontrar nuevas maneras de resolver lo que hoy parece difícil.</p>
-      <p>La creatividad humana, el desarrollo de software y la inteligencia artificial pueden ampliar nuestras capacidades. Lo importante no es la tecnología por sí misma, sino lo que nos permite hacer con ella.</p>
-      <p class="mf-callout">No se trata de esperar a que las posibilidades lleguen. Se trata de construirlas.</p>
-    </div></div>
-  </section>
-  <div class="mf-wrap"><span class="mf-rule" aria-hidden="true"></span></div>
-  <section class="mf-section mf-wrap" id="principios" aria-labelledby="mf-principios">
-    <div class="mf-section-head"><p class="mf-index">02 / Nuestra filosofía</p><div>
-      <h2 id="mf-principios">El progreso se construye <span class="mf-pink">con personas.</span></h2>
-      <div class="mf-values">
-        <div class="mf-value"><h3>Personas primero</h3><p>La tecnología debe acompañar las decisiones humanas, respetar la autonomía y ser comprensible para quienes la utilizan.</p></div>
-        <div class="mf-value"><h3>Conocimiento compartido</h3><p>Cada experiencia y cada mirada aportan algo. Creemos en aprender, intercambiar ideas y crecer mediante la colaboración.</p></div>
-        <div class="mf-value"><h3>Creatividad con responsabilidad</h3><p>Innovar también es escuchar, cuestionar, probar y mejorar. Elegimos crear soluciones útiles antes que perseguir novedades por sí mismas.</p></div>
+  <section class="mf-hero" aria-labelledby="mf-title">
+    <div class="mf-hero-inner">
+      <img class="mf-brand" src="/static/desarrollamo-brand-horizontal.svg" alt="DesarrollAMO." width="360" height="64" />
+      <p class="mf-kicker">Manifiesto público · Tecnología con alma.</p>
+      <h1 id="mf-title">Crecer es una decisión.<br><span>Construir, también.</span></h1>
+      <p class="mf-lead">Creemos en las personas que se animan a aprender algo nuevo, a probar otra vez y a transformar sus ideas en posibilidades reales.</p>
+      <p class="mf-intro">DesarrollAMO nace de esa convicción: la tecnología puede acercarnos, potenciar lo que sabemos y ayudarnos a llegar más lejos. Pero el verdadero motor de cualquier cambio sigue siendo la voluntad humana de superarse.</p>
+      <div class="mf-actions"><a class="mf-btn mf-btn--pink" href="#superacion">Lo que nos mueve ↓</a><a class="mf-btn mf-btn--outline" href="#sumarse">Cómo ser parte ↗</a></div>
+      <div class="mf-promise" aria-label="Tres ideas que nos representan">
+        <div class="mf-promise-item"><strong>Aprender</strong>La curiosidad nos pone en movimiento.</div>
+        <div class="mf-promise-item"><strong>Construir</strong>Las ideas crecen cuando las llevamos a la práctica.</div>
+        <div class="mf-promise-item"><strong>Compartir</strong>El conocimiento se multiplica cuando circula.</div>
       </div>
-    </div></div>
+    </div>
   </section>
-  <div class="mf-wrap"><span class="mf-rule" aria-hidden="true"></span></div>
-  <section class="mf-section mf-wrap" id="compromiso" aria-labelledby="mf-compromiso">
-    <div class="mf-section-head"><p class="mf-index">03 / Nuestro compromiso</p><div class="mf-copy">
-      <h2 id="mf-compromiso">De las ideas a las <span class="mf-pink">soluciones reales.</span></h2>
-      <p>En DesarrollAMO buscamos que el desarrollo tecnológico se traduzca en herramientas claras, experiencias accesibles y oportunidades concretas para personas, proyectos y organizaciones.</p>
-      <p>Trabajamos con curiosidad, honestidad y vocación de mejora continua. Escuchamos cada necesidad, respetamos la confianza de quienes se acercan y valoramos lo que puede construirse en conjunto.</p>
-      <div class="mf-highlight"><p><strong>Desarrollar es mucho más que escribir código.</strong> Es conectar ideas, conocimientos y personas para que algo que antes no existía pueda empezar a existir.</p></div>
-    </div></div>
+
+  <section class="mf-section mf-wrap" id="vision" aria-labelledby="mf-vision">
+    <p class="mf-section-label">01 · Por qué estamos acá</p>
+    <h2 id="mf-vision">No queremos mirar el futuro desde afuera. <span class="mf-pink">Queremos participar en su construcción.</span></h2>
+    <div class="mf-copy">
+      <p>Las ideas pueden aparecer en cualquier lugar: en una charla, en un problema cotidiano, en un pequeño emprendimiento o en alguien que se pregunta por qué las cosas no podrían hacerse de otra manera. No siempre llegan acompañadas de dinero, contactos o formación técnica. Eso no las vuelve menos valiosas.</p>
+      <p>Creemos que el desarrollo tecnológico puede abrir caminos para quienes quieren hacer, aprender y emprender. No hace falta comprender cada línea de código para imaginar una solución. Hace falta encontrar formas de conectar esa imaginación con el conocimiento y las herramientas adecuadas.</p>
+      <p>En DesarrollAMO nos interesa esa conexión: entre una necesidad y una respuesta útil, entre una persona que sabe y otra que quiere aprender, entre lo que hoy podemos hacer y lo que todavía nos queda por descubrir.</p>
+      <p class="mf-standout">La tecnología es una herramienta. La intención de crecer, crear y mejorar es lo que le da sentido.</p>
+    </div>
   </section>
-  <div class="mf-wrap"><span class="mf-rule" aria-hidden="true"></span></div>
-  <section class="mf-invite mf-wrap" id="sumarse" aria-labelledby="mf-sumarse">
-    <p class="mf-kicker">04 / Una invitación abierta</p>
-    <h2 id="mf-sumarse">Las grandes ideas no se construyen <span class="mf-pink">en soledad.</span></h2>
-    <p>Si tenés una idea que querés hacer realidad, conocimientos para compartir o una propuesta de colaboración, nos interesa conocerte.</p>
-    <p>También podés apoyar el crecimiento de DesarrollAMO con un aporte voluntario. Cada forma de participación puede abrir nuevas posibilidades.</p>
-    <p><strong>El futuro también se construye con vos.</strong></p>
-    <div class="mf-actions">
-      <a class="mf-btn mf-btn--pink" href="https://www.instagram.com/desarrollamoficial/" target="_blank" rel="noopener noreferrer" aria-label="Conversar con DesarrollAMO por Instagram (abre una pestaña nueva)">Conversemos ↗</a>
-      <a class="mf-btn mf-btn--outline" href="/apoyar">Apoyar a DesarrollAMO ↗</a>
-      <a class="mf-btn mf-btn--outline" href="/servicios">Conocer nuestros servicios ↗</a>
-    </div><p class="mf-footnote">Tecnología con alma. · DesarrollAMO.</p>
+
+  <section class="mf-section mf-wrap" id="superacion" aria-labelledby="mf-superacion">
+    <p class="mf-section-label">02 · El valor de superarnos</p>
+    <h2 id="mf-superacion">La autosuperación no es llegar primero. <span class="mf-pink">Es no renunciar a seguir creciendo.</span></h2>
+    <div class="mf-copy">
+      <p>Nadie nace sabiendo hacerlo todo. Todos empezamos siendo principiantes en algo; todos nos equivocamos, pedimos ayuda y volvemos a intentarlo. La diferencia no está en no fallar, sino en lo que elegimos hacer después de cada intento.</p>
+      <p>Para nosotros, superarse significa aprender una habilidad que ayer parecía lejana, encontrar una solución donde antes había un obstáculo o animarse a hacer una pregunta que todavía no sabemos responder. A veces ese avance se ve en un proyecto terminado. Otras veces, en la confianza que gana una persona al descubrir que sí puede aprender.</p>
+      <p><strong>Crecer no debería ser una competencia contra los demás.</strong> Cada uno tiene su punto de partida, sus tiempos y sus recursos. Nos interesa la mejora posible y sostenida: avanzar con lo que tenemos, reconocer lo que nos falta y buscar juntos una manera de dar el siguiente paso.</p>
+      <p>La inteligencia artificial y las herramientas digitales pueden ampliar nuestras capacidades, pero no reemplazan la curiosidad, el esfuerzo, el criterio ni la decisión de actuar. El aprendizaje vale por lo que nos permite construir, y también por cómo nos transforma en el proceso.</p>
+    </div>
+    <div class="mf-cards" aria-label="Cómo entendemos la autosuperación">
+      <article class="mf-panel"><span class="mf-no">01 · APRENDER</span><h3>Hacer lugar a lo que no sabemos</h3><p>Escuchar, preguntar, investigar y aceptar que siempre hay algo nuevo por descubrir.</p></article>
+      <article class="mf-panel"><span class="mf-no">02 · INTENTAR</span><h3>Pasar de la idea a la acción</h3><p>Probar con lo disponible, observar los resultados y convertir la experiencia en conocimiento.</p></article>
+      <article class="mf-panel"><span class="mf-no">03 · MEJORAR</span><h3>Volver a empezar con más herramientas</h3><p>Reconocer los errores, ajustar el rumbo y apreciar cada avance, por pequeño que sea.</p></article>
+    </div>
+  </section>
+
+  <section class="mf-community" id="pertenecer" aria-labelledby="mf-pertenecer">
+    <div class="mf-community-inner mf-wrap">
+      <p class="mf-section-label">03 · El sentido de pertenecer</p>
+      <h2 id="mf-pertenecer">Un proyecto puede empezar con una idea. <span class="mf-pink">Crece cuando otras personas encuentran un lugar en ella.</span></h2>
+      <div class="mf-copy">
+        <p>Nos entusiasma encontrarnos con quienes tienen ganas de hacer algo más: quienes comparten una idea sin saber todavía cómo realizarla, quienes ofrecen una mirada distinta, quienes enseñan lo que aprendieron y quienes se acercan con una pregunta genuina.</p>
+        <p><strong>Pertenecer no significa pensar igual ni saber lo mismo.</strong> Significa poder aportar desde nuestra experiencia, sentir que nuestras preguntas tienen lugar y encontrar personas con quienes intercambiar conocimientos y posibilidades.</p>
+        <p>No queremos que alguien llegue a DesarrollAMO sintiendo que primero tiene que demostrar cuánto sabe o cuánto puede aportar económicamente. La curiosidad, el compromiso, la capacidad de escuchar y las ganas de aprender también tienen un valor enorme.</p>
+        <p>Hay muchas formas de participar sin formar parte de la organización interna: compartir una experiencia, conversar sobre un desafío, proponer una colaboración, acercar un conocimiento o simplemente seguir lo que hacemos y encontrar inspiración para empezar algo propio.</p>
+      </div>
+      <div class="mf-panel mf-panel--warm" style="margin-top:32px">
+        <h3>Queremos que una conversación pueda convertirse en el comienzo de algo.</h3>
+        <p>Una nueva idea. Una solución compartida. Una oportunidad de aprender. Un proyecto que antes parecía demasiado grande para intentarlo en soledad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mf-section mf-wrap" id="tecnologia" aria-labelledby="mf-tecnologia">
+    <p class="mf-section-label">04 · Tecnología con alma</p>
+    <h2 id="mf-tecnologia">Nos importa lo que la tecnología permite hacer. <span class="mf-pink">Y a quiénes les permite hacerlo.</span></h2>
+    <div class="mf-copy">
+      <p>Desarrollar no es acumular herramientas ni perseguir cada novedad. Es comprender una necesidad y buscar una respuesta que tenga sentido para quien la va a utilizar. A veces será una página web, una aplicación o una automatización. Otras veces, el primer paso será escuchar y reformular la pregunta.</p>
+      <p>Creemos en soluciones comprensibles, en el respeto por las personas y en el uso responsable de la inteligencia artificial. Nos interesa que estas herramientas acompañen el criterio humano y amplíen oportunidades, sin convertir a nadie en un espectador de sus propias decisiones.</p>
+      <p>También creemos en la honestidad de mostrar el trabajo por lo que es: reconocer lo que funciona, admitir lo que falta y mejorar sin confundir una promesa con un resultado. La confianza se construye así, proyecto a proyecto.</p>
+    </div>
+  </section>
+
+  <section class="mf-section mf-wrap" id="principios" aria-labelledby="mf-principios">
+    <p class="mf-section-label">05 · Lo que elegimos defender</p>
+    <h2 id="mf-principios">Nuestros principios se demuestran <span class="mf-pink">en la manera de actuar.</span></h2>
+    <div class="mf-cards">
+      <article class="mf-panel"><span class="mf-no">PERSONAS</span><h3>Respeto y autonomía</h3><p>Escuchar necesidades reales, explicar con claridad y respetar el criterio y las decisiones de quienes confían en nosotros.</p></article>
+      <article class="mf-panel"><span class="mf-no">CONOCIMIENTO</span><h3>Aprendizaje continuo</h3><p>Buscar mejores preguntas, aprender de los intentos y mantener viva la curiosidad incluso cuando algo ya parece funcionar.</p></article>
+      <article class="mf-panel"><span class="mf-no">COLABORACIÓN</span><h3>Crecer con otros</h3><p>Valorar los aportes diferentes, reconocer el trabajo compartido y crear oportunidades para aprender unos de otros.</p></article>
+    </div>
+    <div class="mf-copy" style="margin-top:32px"><p>Estos principios no son una lista para exhibir: son una dirección que nos proponemos sostener, revisar y mejorar con el tiempo.</p></div>
+  </section>
+
+  <section class="mf-section mf-wrap" id="sumarse" aria-labelledby="mf-sumarse">
+    <p class="mf-section-label">06 · Una invitación abierta</p>
+    <h2 id="mf-sumarse">No hace falta tener todas las respuestas <span class="mf-pink">para acercarte.</span></h2>
+    <div class="mf-copy">
+      <p>Tal vez tengas una idea que nunca te animaste a contar. Tal vez trabajes en otro campo y veas un problema que merece resolverse. Quizás tengas conocimientos para compartir, quieras aprender algo nuevo o te interese colaborar con personas que también disfrutan construir.</p>
+      <p>Nos gustaría escucharte. No prometemos que cada propuesta se convierta en un proyecto, pero sí creemos que una conversación puede abrir posibilidades que ninguna de las partes había imaginado por su cuenta.</p>
+      <p><strong>Ser parte empieza con participar:</strong> hacer una pregunta, compartir una experiencia, traer una idea o tender un puente entre personas que pueden ayudarse. Cada encuentro puede enseñarnos algo a todos.</p>
+    </div>
+    <div class="mf-ways" aria-label="Formas de participar">
+      <article class="mf-panel"><h3>Compartí lo que sabés o lo que querés aprender</h3><p>Una experiencia, una pregunta o un conocimiento pueden servirle a alguien más. Nos interesa escuchar miradas diferentes, también de quienes no vienen del mundo tecnológico.</p></article>
+      <article class="mf-panel"><h3>Traé tu idea o proponé una colaboración</h3><p>Si imaginás una solución, tenés un proyecto o ves una oportunidad para construir algo en conjunto, conversemos sobre lo que podría hacerse.</p></article>
+      <article class="mf-panel mf-panel--warm"><h3>Si querés, también podés apoyar económicamente</h3><p>El aporte voluntario es otra manera de acompañar el desarrollo de DesarrollAMO. No es un requisito para acercarte, compartir conocimientos o participar de una conversación. <a href="/apoyar" style="color:#FFBDD9;text-underline-offset:4px;font-weight:700">Conocé las opciones de apoyo voluntario →</a></p></article>
+    </div>
+    <div class="mf-actions"><a class="mf-btn mf-btn--pink" href="https://www.instagram.com/desarrollamoficial/" target="_blank" rel="noopener noreferrer" aria-label="Conversar con DesarrollAMO por Instagram (abre una pestaña nueva)">Hablemos de tu idea ↗</a><a class="mf-btn mf-btn--outline" href="/servicios">Conocé lo que hacemos ↗</a></div>
+  </section>
+
+  <section class="mf-community mf-invite" aria-labelledby="mf-cierre">
+    <div class="mf-wrap">
+      <p class="mf-section-label">Una idea para llevarte</p>
+      <h2 id="mf-cierre">No importa sólo hasta dónde podemos llegar. <span class="mf-pink">Importa en quiénes podemos convertirnos mientras avanzamos.</span></h2>
+      <div class="mf-copy"><p>Si algo de lo que leíste te hizo pensar en una idea propia, te dio ganas de aprender o te recordó que todavía podés intentar eso que venís postergando, este manifiesto ya empezó a cumplir su propósito.</p>
+      <p><strong>Construí. Aprendé. Compartí. Volvé a intentar.</strong> Hay lugar para seguir creciendo.</p></div>
+      <p class="mf-note">DesarrollAMO. · Tecnología con alma.</p>
+    </div>
   </section>
 </main>
 
