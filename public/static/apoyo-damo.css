@@ -72,18 +72,19 @@
 .amo-support-page a:focus-visible{outline:2px solid #67b8ff;outline-offset:3px}
 .amo-support-page #aporte-unico{scroll-margin-top:86px}
 @media(max-width:810px){
- .amo-support-page .amo-support-nav a:nth-child(1){display:inline}
- .amo-support-page header>div{gap:8px}
- .amo-support-page .amo-top-support{margin:0 4px 0 0;padding:.38rem .55rem;font-size:.7rem}
- .amo-support-page .amo-support-nav{gap:10px}
+ .amo-support-page header>div{gap:8px;flex-wrap:wrap;height:auto;min-height:64px;padding:8px 18px}
+ .amo-support-page .amo-top-support{margin:0 0 0 auto;padding:.38rem .55rem;font-size:.7rem}
+ .amo-support-page .amo-support-nav{order:3;width:100%;margin-left:0;gap:14px;overflow-x:auto;white-space:nowrap;padding:2px 0 4px;scrollbar-width:thin}
+ .amo-support-page .amo-support-wrap{padding-top:124px}
  .amo-support-page .amo-support-discover{flex-direction:column;align-items:stretch}
  .amo-support-page .amo-support-discover nav{min-width:0}
 }
 @media(max-width:510px){
  .amo-support-page .amo-top-support{display:none}
- .amo-support-page header>div{padding:0 10px}
- .amo-support-page .amo-support-brand img{width:min(33vw,126px)}
+ .amo-support-page header>div{padding:8px 10px}
+ .amo-support-page .amo-support-brand img{width:min(42vw,126px)}
+ .amo-support-page .amo-support-nav{gap:12px}
  .amo-support-page .amo-support-nav a{font-size:11px}
- .amo-support-page .amo-support-wrap{width:calc(100% - 20px)}
+ .amo-support-page .amo-support-wrap{width:calc(100% - 20px);padding-top:118px}
  .amo-support-page .amo-support-intro{padding:20px 15px}
 }

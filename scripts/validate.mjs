@@ -64,4 +64,21 @@ for (const route of ['servicios/index.html', 'servicios.html']) {
   if (count(html, 'class="amo-price-group"') < 6) throw new Error(`Catálogo de servicios incompleto: ${route}`);
 }
 
+const apoyarHtml = fs.readFileSync(path.join(pub, 'apoyar.html'), 'utf8');
+for (const href of ['href="/"', 'href="/servicios"', 'href="/galeria"', 'href="/manifiesto"', 'https://www.instagram.com/desarrollamoficial']) {
+  if (!apoyarHtml.includes(href)) throw new Error(`Navegación principal incompleta en /apoyar: ${href}`);
+}
+
+const galleryHtml = fs.readFileSync(path.join(pub, 'galeria.html'), 'utf8');
+const canonicalCvLinks = [
+  'https://cvs.desarrollamo.com.ar/julia-sidor/',
+  'https://cvs.desarrollamo.com.ar/lola-jimeno-fernandez/',
+  'https://cvs.desarrollamo.com.ar/marcos-rubial/',
+  'https://cvs.desarrollamo.com.ar/nadia-martin/',
+  'https://cvs.desarrollamo.com.ar/felipe-rubio/',
+  'https://cvs.desarrollamo.com.ar/agustin-vitelli/'
+];
+for (const url of canonicalCvLinks) if (count(galleryHtml, url) !== 2) throw new Error(`CV sin URL canónica única en Galería: ${url}`);
+if (/https:\/\/cv[a-z0-9-]*\.netlify\.app\//i.test(galleryHtml)) throw new Error('Galería todavía enlaza un CV directamente por Netlify');
+
 console.log(`Web v0.2.0: validación PASS (${files.length} archivos, ${htmlFiles.length} HTML)`);
